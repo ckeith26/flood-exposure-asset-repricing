@@ -19,8 +19,9 @@ paper/figures/*
 paper/tables/*
 !paper/tables/*.tex
 
-# Stata logs
+# Stata logs (allow output/ logs for replication)
 *.log
+!output/*.log
 
 # Lock / temp files
 ~$*

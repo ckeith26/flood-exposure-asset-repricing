@@ -1,0 +1,72 @@
+{
+  "title": "Balance Table: Pre-Treatment Characteristics",
+  "columns": [
+    "Control",
+    "Treated",
+    "Difference"
+  ],
+  "notes": [
+    "Treated: zips with single LOMR during 2009-2022.",
+    "Control: zips with no LOMR.",
+    "Pre-treatment means reported for treated zips.",
+    "Difference = Treated - Control. Welch t-test."
+  ],
+  "variables": [
+    {
+      "variable": "Home Value (Dec 2022 $)",
+      "control": 478848.23,
+      "treated": 474199.5,
+      "difference": -4648.72,
+      "stars": ""
+    },
+    {
+      "variable": "Population",
+      "control": 18542.78,
+      "treated": 21918.1,
+      "difference": 3375.32,
+      "stars": "***"
+    },
+    {
+      "variable": "Pop. Density (per sq mi)",
+      "control": 5027.05,
+      "treated": 3123.25,
+      "difference": -1903.8,
+      "stars": "***"
+    },
+    {
+      "variable": "County Unemp. Rate (\\%)",
+      "control": 6.45,
+      "treated": 6.8,
+      "difference": 0.35,
+      "stars": "***"
+    },
+    {
+      "variable": "NFIP Policies (qtr avg)",
+      "control": 59.98,
+      "treated": 84.55,
+      "difference": 24.57,
+      "stars": "***"
+    },
+    {
+      "variable": "NFIP Avg Premium ($)",
+      "control": 690.42,
+      "treated": 781.76,
+      "difference": 91.35,
+      "stars": "***"
+    },
+    {
+      "variable": "SFHA Zone Share",
+      "control": 0.34,
+      "treated": 0.4,
+      "difference": 0.06,
+      "stars": "***"
+    },
+    {
+      "variable": "NFIP Claims (qtr avg)",
+      "control": 1.07,
+      "treated": 1.35,
+      "difference": 0.28,
+      "stars": ""
+    }
+  ]
+}

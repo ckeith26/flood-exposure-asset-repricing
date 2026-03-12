@@ -127,7 +127,7 @@ gen yr = year(date_stata)
 egen county_yr = group(county_id yr)   // county × year FE identifier
 
 * --- Label variables ---
-label var real_zhvi    "Home Value Index (Dec 2022 \$)"
+label var real_zhvi    "Home Value Index (Dec 2022 $)"
 label var ln_real_zhvi "ln(Real ZHVI)"
 label var zhvi         "Home Value Index (nominal $)"
 label var ln_zhvi      "ln(Nominal ZHVI)"
@@ -135,12 +135,12 @@ label var treated      "Post-LOMR"
 label var ever_treated "Ever Treated"
 label var event_time   "Months Since LOMR (qtr avg)"
 label var n_lomrs      "Num. LOMRs in Zip"
-label var unemployment_rate "County Unemp. Rate (\%)"
+label var unemployment_rate "County Unemp. Rate (%)"
 label var n_policies   "NFIP Policies (qtr avg)"
-label var avg_premium  "NFIP Avg Premium (\$)"
+label var avg_premium  "NFIP Avg Premium ($)"
 label var sfha_share   "SFHA Zone Share"
 label var n_claims     "NFIP Claims (qtr avg)"
-label var total_paid   "NFIP Claims Paid (\$)"
+label var total_paid   "NFIP Claims Paid ($)"
 label var population   "Zip Population"
 label var density      "Zip Pop. Density"
 label var treatment_intensity "Treatment Intensity (LOMR/ZCTA)"
@@ -280,24 +280,20 @@ collapse (mean) real_zhvi unemployment_rate n_policies ///
     (first) ever_treated population density, ///
     by(zip)
 
-label var real_zhvi         "Home Value (Dec 2022 \$)"
+label var real_zhvi         "Home Value (Dec 2022 $)"
 label var population        "Population"
 label var density           "Pop. Density (per sq mi)"
-label var unemployment_rate "County Unemp. Rate (\%)"
+label var unemployment_rate "County Unemp. Rate (%)"
 label var n_policies        "NFIP Policies (qtr avg)"
-label var avg_premium       "NFIP Avg Premium (\$)"
+label var avg_premium       "NFIP Avg Premium ($)"
 label var sfha_share        "SFHA Zone Share"
 label var n_claims          "NFIP Claims (qtr avg)"
 
-* estpost ttest by(ever_treated) computes group0 - group1 = Control - Treated.
-* To get Treated - Control, reverse the grouping variable.
-gen control = 1 - ever_treated
 estpost ttest real_zhvi population density unemployment_rate ///
-    n_policies avg_premium sfha_share n_claims, by(control) unequal
+    n_policies avg_premium sfha_share n_claims, by(ever_treated) unequal
 
-* mu_1 = Treated (group 0), mu_2 = Control (group 1), b = Treated - Control
 esttab using "$results/s03_balance_table.tex", replace ///
-    cells("mu_2(fmt(%12.2fc)) mu_1(fmt(%12.2fc)) b(fmt(%12.2fc) star)") ///
+    cells("mu_1(fmt(%12.2fc)) mu_2(fmt(%12.2fc)) b(fmt(%12.2fc) star)") ///
     star(* 0.10 ** 0.05 *** 0.01) ///
     collabels("Control" "Treated" "Difference") ///
     noobs nonumber nomtitle label ///
@@ -305,19 +301,13 @@ esttab using "$results/s03_balance_table.tex", replace ///
     addnotes("Treated: zips with single LOMR during 2009-2022." ///
              "Control: zips with no LOMR." ///
              "Pre-treatment means reported for treated zips." ///
-             "Difference = Treated $-$ Control. Welch t-test.")
+             "Difference = Treated - Control. Welch t-test.")
 
 esttab using "$results/s03_balance_table.csv", replace ///
-    cells("mu_2(fmt(%12.2f)) mu_1(fmt(%12.2f)) b(fmt(%12.2f) star)") ///
+    cells("mu_1(fmt(%12.2f)) mu_2(fmt(%12.2f)) b(fmt(%12.2f) star)") ///
     star(* 0.10 ** 0.05 *** 0.01) ///
     collabels("Control" "Treated" "Difference") ///
     noobs nonumber nomtitle label plain
-
-* TeX-escape dollar signs in balance table (Stata's macro processor
-* consumes \ before $, so labels can't contain literal \$)
-tempfile _tmp
-filefilter "$results/s03_balance_table.tex" "`_tmp'", from(" $)") to(" \BS$)")
-copy "`_tmp'" "$results/s03_balance_table.tex", replace
 
 di _n "Balance table saved to $results/s03_balance_table.tex/csv"
 
@@ -387,11 +377,6 @@ esttab using "$results/s02_summary_stats.tex", replace ///
            republican "\textit{Panel D: Heterogeneity Measures}" ///
            population "\textit{Panel E: Sample Characteristics}", nolabel) ///
     title("Summary Statistics — Estimation Sample (2009-2022)")
-
-* TeX-escape dollar signs in summary stats table
-tempfile _tmp
-filefilter "$results/s02_summary_stats.tex" "`_tmp'", from(" $)") to(" \BS$)")
-copy "`_tmp'" "$results/s02_summary_stats.tex", replace
 
 esttab using "$results/s02_summary_stats.csv", replace ///
     cells("count mean(fmt(%12.2f)) sd(fmt(%12.2f)) min(fmt(%12.2f)) p25(fmt(%12.2f)) p50(fmt(%12.2f)) p75(fmt(%12.2f)) max(fmt(%12.2f))") ///
@@ -943,11 +928,6 @@ esttab did_twfe using "$results/s07_did_twfe.tex", replace ///
     mtitles("TWFE DiD") ///
     title("ln(Real ZHVI) on LOMR (TWFE DiD)") ///
     addnotes("Zip and county×year FE. SE clustered at county level.")
-
-* TeX-escape dollar signs and percent signs in TWFE table
-tempfile _tmp
-filefilter "$results/s07_did_twfe.tex" "`_tmp'", from(" $)") to(" \BS$)")
-copy "`_tmp'" "$results/s07_did_twfe.tex", replace
 
 
 * =============================================================================
@@ -2159,11 +2139,6 @@ qui tab zip_id
 di "Zips after balancing: " r(r)
 
 * Set panel and run decomposition
-* NOTE: bacondecomp.ado patched (line 743) to skip blank "Always vs never
-* treated" caption when cvcest is empty. This happens because early-cohort
-* zips appear always-treated in the balanced annual panel but the direct
-* always-vs-never comparison has zero weight. If bacondecomp is updated
-* via ssc install, the patch must be reapplied.
 xtset zip_id yr
 bacondecomp ln_real_zhvi treated, ddetail
 

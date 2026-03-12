@@ -1,0 +1,17 @@
+{
+  "title": "Flood Risk and Home Values",
+  "subtitle": "How FEMA Flood Zone Reclassifications Affect Property Markets",
+  "author": "Cameron Keith",
+  "course": "Econ 66: Topics in Money and Finance",
+  "analysis_window": {
+    "start": 2009,
+    "end": 2022
+  },
+  "n_observations": 228005,
+  "headline_coefficient": -0.0287,
+  "headline_pct": -2.8,
+  "headline_description": "-2.8% decline in home values four or more years after LOMR flood zone reclassification",
+  "intensity_coefficient": -7.15,
+  "sample_description": "Coastal US zip codes (excluding Alaska and territories), quarterly panel 2009-2022",
+  "n_observations_regression": "228,002"
+}

@@ -1,0 +1,514 @@
+{
+  "title": "Summary Statistics \u2014 Estimation Sample (2009-2022)",
+  "columns": [
+    "N",
+    "Mean",
+    "Std Dev",
+    "Min",
+    "P25",
+    "Median",
+    "P75",
+    "Max"
+  ],
+  "panels": [
+    {
+      "label": "Panel A: Outcomes",
+      "variables": [
+        {
+          "variable": "Home Value Index (Dec 2022 $)",
+          "count": 228005.0,
+          "mean": 486214.62,
+          "sd": 416676.37,
+          "min": 32424.71,
+          "p25": 234258.39,
+          "p50": 374152.97,
+          "p75": 594862.94,
+          "max": 8125586.0
+        },
+        {
+          "variable": "ln(Real ZHVI)",
+          "count": 228005.0,
+          "mean": 12.85,
+          "sd": 0.67,
+          "min": 11.36,
+          "p25": 12.36,
+          "p50": 12.83,
+          "p75": 13.3,
+          "max": 14.56
+        },
+        {
+          "variable": "ln(NFIP Policies + 1)",
+          "count": 228005.0,
+          "mean": 2.46,
+          "sd": 1.8,
+          "min": 0.0,
+          "p25": 0.98,
+          "p50": 2.08,
+          "p75": 3.71,
+          "max": 7.87
+        },
+        {
+          "variable": "ln(NFIP Claims + 1)",
+          "count": 228005.0,
+          "mean": 0.11,
+          "sd": 0.46,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "max": 8.16
+        }
+      ]
+    },
+    {
+      "label": "Panel B: Treatment",
+      "variables": [
+        {
+          "variable": "Post-LOMR",
+          "count": 228005.0,
+          "mean": 0.04,
+          "sd": 0.19,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "max": 1.0
+        },
+        {
+          "variable": "Ever Treated",
+          "count": 228005.0,
+          "mean": 0.13,
+          "sd": 0.34,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "max": 1.0
+        },
+        {
+          "variable": "Policy Intensity (per 1,000)",
+          "count": 228005.0,
+          "mean": 5.93,
+          "sd": 21.07,
+          "min": 0.0,
+          "p25": 0.18,
+          "p50": 0.68,
+          "p75": 4.13,
+          "max": 716.99
+        },
+        {
+          "variable": "Treatment Intensity (per 1,000)",
+          "count": 228005.0,
+          "mean": 3.6,
+          "sd": 32.54,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "max": 944.01
+        },
+        {
+          "variable": "Upzoned (into SFHA)",
+          "count": 228005.0,
+          "mean": 0.05,
+          "sd": 0.21,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "max": 1.0
+        },
+        {
+          "variable": "Downzoned (out of SFHA)",
+          "count": 228005.0,
+          "mean": 0.03,
+          "sd": 0.18,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "max": 1.0
+        },
+        {
+          "variable": "SFHA-Crossing LOMR",
+          "count": 228005.0,
+          "mean": 0.08,
+          "sd": 0.27,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "max": 1.0
+        }
+      ]
+    },
+    {
+      "label": "Panel C: Controls",
+      "variables": [
+        {
+          "variable": "NFIP Policies (qtr avg)",
+          "count": 228005.0,
+          "mean": 65.21,
+          "sd": 164.11,
+          "min": 0.0,
+          "p25": 1.67,
+          "p50": 7.0,
+          "p75": 39.67,
+          "max": 2624.67
+        },
+        {
+          "variable": "NFIP Avg Premium ($)",
+          "count": 228005.0,
+          "mean": 710.36,
+          "sd": 631.82,
+          "min": 0.0,
+          "p25": 357.67,
+          "p50": 565.67,
+          "p75": 914.1,
+          "max": 19570.33
+        },
+        {
+          "variable": "SFHA Zone Share",
+          "count": 228005.0,
+          "mean": 0.35,
+          "sd": 0.31,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.33,
+          "p75": 0.6,
+          "max": 1.0
+        },
+        {
+          "variable": "NFIP Claims (qtr avg)",
+          "count": 228005.0,
+          "mean": 1.13,
+          "sd": 25.22,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "max": 3498.0
+        },
+        {
+          "variable": "Zip Population",
+          "count": 228005.0,
+          "mean": 19717.91,
+          "sd": 17846.46,
+          "min": 25.0,
+          "p25": 5236.0,
+          "p50": 15229.0,
+          "p75": 29309.0,
+          "max": 109931.0
+        },
+        {
+          "variable": "Zip Pop. Density",
+          "count": 228005.0,
+          "mean": 4960.31,
+          "sd": 11251.76,
+          "min": 0.9,
+          "p25": 225.6,
+          "p50": 1571.8,
+          "p75": 4837.0,
+          "max": 143070.7
+        }
+      ]
+    },
+    {
+      "label": "Panel D: Heterogeneity",
+      "variables": [
+        {
+          "variable": "Republican County",
+          "count": 222846.0,
+          "mean": 0.5,
+          "sd": 0.5,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 1.0,
+          "p75": 1.0,
+          "max": 1.0
+        },
+        {
+          "variable": "R Two-Party Vote Share",
+          "count": 222846.0,
+          "mean": 0.42,
+          "sd": 0.15,
+          "min": 0.06,
+          "p25": 0.32,
+          "p50": 0.43,
+          "p75": 0.52,
+          "max": 0.89
+        },
+        {
+          "variable": "Disclosure: Strict (9 states)",
+          "count": 228005.0,
+          "mean": 0.29,
+          "sd": 0.45,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 1.0,
+          "max": 1.0
+        },
+        {
+          "variable": "Disclosure: Broad (13 states)",
+          "count": 228005.0,
+          "mean": 0.61,
+          "sd": 0.49,
+          "min": 0.0,
+          "p25": 0.0,
+          "p50": 1.0,
+          "p75": 1.0,
+          "max": 1.0
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "variable": "Home Value Index (Dec 2022 $)",
+      "count": 228005.0,
+      "mean": 486214.62,
+      "sd": 416676.37,
+      "min": 32424.71,
+      "p25": 234258.39,
+      "p50": 374152.97,
+      "p75": 594862.94,
+      "max": 8125586.0
+    },
+    {
+      "variable": "ln(Real ZHVI)",
+      "count": 228005.0,
+      "mean": 12.85,
+      "sd": 0.67,
+      "min": 11.36,
+      "p25": 12.36,
+      "p50": 12.83,
+      "p75": 13.3,
+      "max": 14.56
+    },
+    {
+      "variable": "ln(NFIP Policies + 1)",
+      "count": 228005.0,
+      "mean": 2.46,
+      "sd": 1.8,
+      "min": 0.0,
+      "p25": 0.98,
+      "p50": 2.08,
+      "p75": 3.71,
+      "max": 7.87
+    },
+    {
+      "variable": "ln(NFIP Claims + 1)",
+      "count": 228005.0,
+      "mean": 0.11,
+      "sd": 0.46,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "max": 8.16
+    },
+    {
+      "variable": "Post-LOMR",
+      "count": 228005.0,
+      "mean": 0.04,
+      "sd": 0.19,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "max": 1.0
+    },
+    {
+      "variable": "Ever Treated",
+      "count": 228005.0,
+      "mean": 0.13,
+      "sd": 0.34,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "max": 1.0
+    },
+    {
+      "variable": "Policy Intensity (per 1,000)",
+      "count": 228005.0,
+      "mean": 5.93,
+      "sd": 21.07,
+      "min": 0.0,
+      "p25": 0.18,
+      "p50": 0.68,
+      "p75": 4.13,
+      "max": 716.99
+    },
+    {
+      "variable": "Treatment Intensity (per 1,000)",
+      "count": 228005.0,
+      "mean": 3.6,
+      "sd": 32.54,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "max": 944.01
+    },
+    {
+      "variable": "Upzoned (into SFHA)",
+      "count": 228005.0,
+      "mean": 0.05,
+      "sd": 0.21,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "max": 1.0
+    },
+    {
+      "variable": "Downzoned (out of SFHA)",
+      "count": 228005.0,
+      "mean": 0.03,
+      "sd": 0.18,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "max": 1.0
+    },
+    {
+      "variable": "SFHA-Crossing LOMR",
+      "count": 228005.0,
+      "mean": 0.08,
+      "sd": 0.27,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "max": 1.0
+    },
+    {
+      "variable": "County Unemp. Rate (\\%)",
+      "count": 228005.0,
+      "mean": 6.47,
+      "sd": 2.89,
+      "min": 1.7,
+      "p25": 4.23,
+      "p50": 5.8,
+      "p75": 8.27,
+      "max": 29.8
+    },
+    {
+      "variable": "NFIP Policies (qtr avg)",
+      "count": 228005.0,
+      "mean": 65.21,
+      "sd": 164.11,
+      "min": 0.0,
+      "p25": 1.67,
+      "p50": 7.0,
+      "p75": 39.67,
+      "max": 2624.67
+    },
+    {
+      "variable": "NFIP Avg Premium ($)",
+      "count": 228005.0,
+      "mean": 710.36,
+      "sd": 631.82,
+      "min": 0.0,
+      "p25": 357.67,
+      "p50": 565.67,
+      "p75": 914.1,
+      "max": 19570.33
+    },
+    {
+      "variable": "NFIP Claims (qtr avg)",
+      "count": 228005.0,
+      "mean": 1.13,
+      "sd": 25.22,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "max": 3498.0
+    },
+    {
+      "variable": "Republican County",
+      "count": 222846.0,
+      "mean": 0.5,
+      "sd": 0.5,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 1.0,
+      "p75": 1.0,
+      "max": 1.0
+    },
+    {
+      "variable": "R Two-Party Vote Share",
+      "count": 222846.0,
+      "mean": 0.42,
+      "sd": 0.15,
+      "min": 0.06,
+      "p25": 0.32,
+      "p50": 0.43,
+      "p75": 0.52,
+      "max": 0.89
+    },
+    {
+      "variable": "Disclosure: Strict (9 states)",
+      "count": 228005.0,
+      "mean": 0.29,
+      "sd": 0.45,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 1.0,
+      "max": 1.0
+    },
+    {
+      "variable": "Disclosure: Broad (13 states)",
+      "count": 228005.0,
+      "mean": 0.61,
+      "sd": 0.49,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 1.0,
+      "p75": 1.0,
+      "max": 1.0
+    },
+    {
+      "variable": "Zip Population",
+      "count": 228005.0,
+      "mean": 19717.91,
+      "sd": 17846.46,
+      "min": 25.0,
+      "p25": 5236.0,
+      "p50": 15229.0,
+      "p75": 29309.0,
+      "max": 109931.0
+    },
+    {
+      "variable": "Zip Pop. Density",
+      "count": 228005.0,
+      "mean": 4960.31,
+      "sd": 11251.76,
+      "min": 0.9,
+      "p25": 225.6,
+      "p50": 1571.8,
+      "p75": 4837.0,
+      "max": 143070.7
+    },
+    {
+      "variable": "SFHA Zone Share",
+      "count": 228005.0,
+      "mean": 0.35,
+      "sd": 0.31,
+      "min": 0.0,
+      "p25": 0.0,
+      "p50": 0.33,
+      "p75": 0.6,
+      "max": 1.0
+    }
+  ],
+  "notes": [
+    "Estimation sample of U.S. coastal zip codes, quarterly 2009Q1\u20132022Q4. N = 228,005 zip-quarter obs.",
+    "R Two-Party Vote Share has fewer obs. due to missing election data in some counties."
+  ]
+}

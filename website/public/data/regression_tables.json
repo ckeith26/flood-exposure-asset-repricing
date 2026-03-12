@@ -1,0 +1,3204 @@
+{
+  "main": {
+    "title": "ln(Real ZHVI) on LOMR Treatment",
+    "notes": [
+      "Zip and county\u00d7year fixed effects.",
+      "Standard errors clustered at county level.",
+      "Reference period: 12-0 months before LOMR (\u03c4 = -1).",
+      "Already-treated zips (LOMR before 2009) excluded.",
+      "(1) No controls. (2) Unemployment rate, NFIP policies. (3) Adds avg premium, claims."
+    ],
+    "columns": [
+      "No Controls",
+      "Main Controls",
+      "Full Controls"
+    ],
+    "variables": [
+      {
+        "label": "\u03c4 = -4 (3+ yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.008403,
+            "stars": ""
+          },
+          {
+            "value": -0.0083941,
+            "stars": ""
+          },
+          {
+            "value": -0.0083595,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0076472,
+          0.0076494,
+          0.0076493
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 (2-3 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0002349,
+            "stars": ""
+          },
+          {
+            "value": -0.0003533,
+            "stars": ""
+          },
+          {
+            "value": -0.0002993,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0047167,
+          0.0047035,
+          0.0047039
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 (1-2 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0013058,
+            "stars": ""
+          },
+          {
+            "value": -0.0013802,
+            "stars": ""
+          },
+          {
+            "value": -0.0013417,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0030398,
+          0.003032,
+          0.0030262
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 (0-1 yr post)",
+        "coefficients": [
+          {
+            "value": 5.64e-05,
+            "stars": ""
+          },
+          {
+            "value": -4.85e-05,
+            "stars": ""
+          },
+          {
+            "value": -2.69e-05,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0022981,
+          0.0023069,
+          0.0023073
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 (1-2 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0043534,
+            "stars": ""
+          },
+          {
+            "value": -0.0045369,
+            "stars": ""
+          },
+          {
+            "value": -0.0045734,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.003973,
+          0.0039962,
+          0.0039949
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 (2-3 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0090837,
+            "stars": ""
+          },
+          {
+            "value": -0.0092599,
+            "stars": ""
+          },
+          {
+            "value": -0.0092328,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0059525,
+          0.0059857,
+          0.0059931
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 (3-4 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0139362,
+            "stars": "*"
+          },
+          {
+            "value": -0.0138745,
+            "stars": "*"
+          },
+          {
+            "value": -0.0138639,
+            "stars": "*"
+          }
+        ],
+        "standard_errors": [
+          0.0071692,
+          0.0071397,
+          0.007142
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 (4+ yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0285252,
+            "stars": "**"
+          },
+          {
+            "value": -0.0287047,
+            "stars": "**"
+          },
+          {
+            "value": -0.0286562,
+            "stars": "**"
+          }
+        ],
+        "standard_errors": [
+          0.0112958,
+          0.0112955,
+          0.0113046
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "label": "Observations",
+        "values": [
+          "228,002",
+          "228,002",
+          "228,002"
+        ]
+      },
+      {
+        "label": "Within R\u00b2",
+        "values": [
+          "0.0015",
+          "0.0029",
+          "0.0030"
+        ]
+      }
+    ]
+  },
+  "intensity": {
+    "title": "ln(Real ZHVI) on LOMR \u00d7 Policy Intensity",
+    "notes": [
+      "Zip and county\u00d7year FE. SE clustered at county level.",
+      "Intensity = pre-LOMR NFIP policies / population."
+    ],
+    "columns": [
+      "Binary Treatment",
+      "Intensity-Weighted"
+    ],
+    "variables": [
+      {
+        "label": "\u03c4 = -4 (3+ yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0083941,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0076494,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 (2-3 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0003533,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0047035,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 (1-2 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0013802,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.003032,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 (0-1 yr post)",
+        "coefficients": [
+          {
+            "value": -4.85e-05,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0023069,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 (1-2 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0045369,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0039962,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 (2-3 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0092599,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0059857,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 (3-4 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0138745,
+            "stars": "*"
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0071397,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 (4+ yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0287047,
+            "stars": "**"
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0112955,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -4 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.4106624,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.5744749
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.1304339,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.2792796
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.3017209,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.1938418
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0091879,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.2866075
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.8105185,
+            "stars": "**"
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.3977378
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -1.651486,
+            "stars": "*"
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.8810417
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -3.287864,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          null,
+          1.029648
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -7.151533,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          null,
+          2.541291
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "label": "Observations",
+        "values": [
+          "228,002",
+          "228,002"
+        ]
+      },
+      {
+        "label": "Within R\u00b2",
+        "values": [
+          "0.0029",
+          "0.0039"
+        ]
+      }
+    ]
+  },
+  "updown": {
+    "title": "ln(Real ZHVI) on Upzoning vs Downzoning",
+    "notes": [
+      "Zip and county\u00d7year FE. SE clustered at county level.",
+      "Each spec uses its treated subsample + all never-treated controls.",
+      "Risk direction classified by SFHA zone share change (\u00b11pp threshold)."
+    ],
+    "columns": [
+      "Upzoned (Risk Up)",
+      "Downzoned (Risk Down)"
+    ],
+    "variables": [
+      {
+        "label": "\u03c4 = -4 (3+ yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0061182,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.011511,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 (2-3 yrs pre)",
+        "coefficients": [
+          {
+            "value": 0.0055164,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0065931,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 (1-2 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0017624,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0025971,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 (0-1 yr post)",
+        "coefficients": [
+          {
+            "value": 0.0044096,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0035502,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 (1-2 yrs post)",
+        "coefficients": [
+          {
+            "value": 0.0008249,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0063291,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 (2-3 yrs post)",
+        "coefficients": [
+          {
+            "value": 0.0004273,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0101922,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 (3-4 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0006207,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0121427,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 (4+ yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0142022,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0170452,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -4 (3+ yrs pre)",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0046181,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0143759
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 (2-3 yrs pre)",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0005079,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0102055
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 (1-2 yrs pre)",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0021483,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.005812
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 (0-1 yr post)",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0007591,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0062093
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 (1-2 yrs post)",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0016686,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.008382
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 (2-3 yrs post)",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0057851,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.012246
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 (3-4 yrs post)",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0085131,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.014701
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 (4+ yrs post)",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0236822,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0186242
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "label": "Observations",
+        "values": [
+          "208,170",
+          "205,208"
+        ]
+      },
+      {
+        "label": "Within R\u00b2",
+        "values": [
+          "0.0016",
+          "0.0018"
+        ]
+      }
+    ]
+  },
+  "insurance": {
+    "title": "ln(NFIP Policies) on LOMR Treatment",
+    "notes": [
+      "Zip and county\u00d7year FE. SE clustered at county level.",
+      "Policies: NFIP policy count (mechanism). Claims: falsification.",
+      "Reference period: \u03c4 = -1 (12-0 months before LOMR)."
+    ],
+    "columns": [
+      "ln(Policies)",
+      "ln(Claims)"
+    ],
+    "variables": [
+      {
+        "label": "\u03c4 = -4 (3+ yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0213382,
+            "stars": ""
+          },
+          {
+            "value": -0.0261583,
+            "stars": "*"
+          }
+        ],
+        "standard_errors": [
+          0.0220978,
+          0.0151569
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 (2-3 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0234384,
+            "stars": ""
+          },
+          {
+            "value": -0.0286461,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0164566,
+          0.0253842
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 (1-2 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0119933,
+            "stars": ""
+          },
+          {
+            "value": -0.0176731,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0094748,
+          0.0180916
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 (0-1 yr post)",
+        "coefficients": [
+          {
+            "value": -0.0160439,
+            "stars": ""
+          },
+          {
+            "value": 0.0015392,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0121325,
+          0.0195119
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 (1-2 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0329712,
+            "stars": "**"
+          },
+          {
+            "value": 0.005063,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0129737,
+          0.0235103
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 (2-3 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.029123,
+            "stars": ""
+          },
+          {
+            "value": -0.0347979,
+            "stars": "*"
+          }
+        ],
+        "standard_errors": [
+          0.0186716,
+          0.019068
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 (3-4 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0111152,
+            "stars": ""
+          },
+          {
+            "value": -0.0296348,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0264472,
+          0.0231714
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 (4+ yrs post)",
+        "coefficients": [
+          {
+            "value": 0.0031516,
+            "stars": ""
+          },
+          {
+            "value": -0.0275415,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0386727,
+          0.0225596
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "label": "Observations",
+        "values": [
+          "228,002",
+          "228,002"
+        ]
+      },
+      {
+        "label": "Within R\u00b2",
+        "values": [
+          "0.0021",
+          "0.0002"
+        ]
+      }
+    ]
+  },
+  "disclosure": {
+    "title": "ln(Real ZHVI) on LOMR \u00d7 Disclosure",
+    "notes": [
+      "Zip and county\u00d7year FE. SE clustered at county level.",
+      "ebin = binary LOMR effect (non-disclosure states).",
+      "dbin/dbinb = differential effect in disclosure states.",
+      "Strict: CA, IL, IN, LA, MS, OR, SC, TX, WI. Broad adds FL, VA, NC, NY."
+    ],
+    "columns": [
+      "Binary",
+      "\u00d7 Strict Disclosure",
+      "\u00d7 Broad Disclosure"
+    ],
+    "variables": [
+      {
+        "label": "\u03c4 = -4 (3+ yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0083941,
+            "stars": ""
+          },
+          {
+            "value": -0.0195763,
+            "stars": "**"
+          },
+          {
+            "value": -0.0136412,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0076494,
+          0.0084585,
+          0.0122733
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 (2-3 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0003533,
+            "stars": ""
+          },
+          {
+            "value": -0.0027985,
+            "stars": ""
+          },
+          {
+            "value": -0.0055623,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0047035,
+          0.004378,
+          0.0058132
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 (1-2 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.0013802,
+            "stars": ""
+          },
+          {
+            "value": -0.0017211,
+            "stars": ""
+          },
+          {
+            "value": -0.0031922,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.003032,
+          0.0023785,
+          0.0029504
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 (0-1 yr post)",
+        "coefficients": [
+          {
+            "value": -4.85e-05,
+            "stars": ""
+          },
+          {
+            "value": 0.0003166,
+            "stars": ""
+          },
+          {
+            "value": 0.0055032,
+            "stars": "*"
+          }
+        ],
+        "standard_errors": [
+          0.0023069,
+          0.0027171,
+          0.0029713
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 (1-2 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0045369,
+            "stars": ""
+          },
+          {
+            "value": -0.0050506,
+            "stars": ""
+          },
+          {
+            "value": 0.0007657,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0039962,
+          0.0051244,
+          0.0060482
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 (2-3 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0092599,
+            "stars": ""
+          },
+          {
+            "value": -0.0086415,
+            "stars": ""
+          },
+          {
+            "value": 0.0015654,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0059857,
+          0.0083748,
+          0.0083503
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 (3-4 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0138745,
+            "stars": "*"
+          },
+          {
+            "value": -0.0125985,
+            "stars": ""
+          },
+          {
+            "value": 0.0013932,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0071397,
+          0.011354,
+          0.0117128
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 (4+ yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0287047,
+            "stars": "**"
+          },
+          {
+            "value": -0.0324309,
+            "stars": "*"
+          },
+          {
+            "value": -0.0078637,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0112955,
+          0.0193732,
+          0.0199008
+        ]
+      },
+      {
+        "label": "\u03c4 = -4 \u00d7 Disclosure",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0280117,
+            "stars": "*"
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0166406,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 \u00d7 Disclosure",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0046751,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0107493,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 \u00d7 Disclosure",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0001872,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0067977,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 \u00d7 Disclosure",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0003052,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.004528,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 \u00d7 Disclosure",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0009219,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0080665,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 \u00d7 Disclosure",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0013847,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0118563,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 \u00d7 Disclosure",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0026946,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0139313,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 \u00d7 Disclosure",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.006453,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.0230723,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -4 \u00d7 Broad Disc.",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0084035,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0155269
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 \u00d7 Broad Disc.",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0076784,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0085516
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 \u00d7 Broad Disc.",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0027565,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0050781
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 \u00d7 Broad Disc.",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0077045,
+            "stars": "*"
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0042112
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 \u00d7 Broad Disc.",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0074596,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0079198
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 \u00d7 Broad Disc.",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0148866,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0113131
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 \u00d7 Broad Disc.",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0204213,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0145297
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 \u00d7 Broad Disc.",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.026038,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0238159
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "label": "Observations",
+        "values": [
+          "228,002",
+          "228,002",
+          "228,002"
+        ]
+      },
+      {
+        "label": "Within R\u00b2",
+        "values": [
+          "0.0029",
+          "0.0036",
+          "0.0033"
+        ]
+      }
+    ]
+  },
+  "intensity_quartiles": {
+    "title": "ln(Real ZHVI) by Policy Intensity Quartile",
+    "notes": [
+      "Zip and county\u00d7year FE. SE clustered at county level.",
+      "Quartiles based on pre-LOMR NFIP policy penetration.",
+      "Q1 = lowest penetration, Q4 = highest."
+    ],
+    "columns": [
+      "Q1 (lowest)",
+      "Q2",
+      "Q3",
+      "Q4 (highest)"
+    ],
+    "variables": [
+      {
+        "label": "\u03c4 = \u22124",
+        "coefficients": [
+          {
+            "value": 0.0017368,
+            "stars": ""
+          },
+          {
+            "value": -0.0193748,
+            "stars": ""
+          },
+          {
+            "value": -0.0168558,
+            "stars": ""
+          },
+          {
+            "value": -0.0028352,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0154114,
+          0.0159151,
+          0.010733,
+          0.0190412
+        ]
+      },
+      {
+        "label": "\u03c4 = \u22123",
+        "coefficients": [
+          {
+            "value": 0.0027856,
+            "stars": ""
+          },
+          {
+            "value": 0.0008474,
+            "stars": ""
+          },
+          {
+            "value": -0.0077078,
+            "stars": ""
+          },
+          {
+            "value": 0.0002709,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0073238,
+          0.009505,
+          0.0093894,
+          0.006051
+        ]
+      },
+      {
+        "label": "\u03c4 = \u22122",
+        "coefficients": [
+          {
+            "value": -0.0024264,
+            "stars": ""
+          },
+          {
+            "value": 0.0048446,
+            "stars": ""
+          },
+          {
+            "value": -0.005086,
+            "stars": ""
+          },
+          {
+            "value": -0.004869,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0047352,
+          0.0043052,
+          0.0072093,
+          0.00318
+        ]
+      },
+      {
+        "label": "\u03c4 = 0",
+        "coefficients": [
+          {
+            "value": 0.0008781,
+            "stars": ""
+          },
+          {
+            "value": 0.0017618,
+            "stars": ""
+          },
+          {
+            "value": -0.0033928,
+            "stars": ""
+          },
+          {
+            "value": 0.0004146,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0044418,
+          0.0036753,
+          0.005496,
+          0.0044766
+        ]
+      },
+      {
+        "label": "\u03c4 = +1",
+        "coefficients": [
+          {
+            "value": 0.0020955,
+            "stars": ""
+          },
+          {
+            "value": -0.0119707,
+            "stars": ""
+          },
+          {
+            "value": -0.0072589,
+            "stars": ""
+          },
+          {
+            "value": -0.004842,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0050479,
+          0.0077887,
+          0.0091236,
+          0.006714
+        ]
+      },
+      {
+        "label": "\u03c4 = +2",
+        "coefficients": [
+          {
+            "value": 0.0045061,
+            "stars": ""
+          },
+          {
+            "value": -0.0301316,
+            "stars": "***"
+          },
+          {
+            "value": -0.0095972,
+            "stars": ""
+          },
+          {
+            "value": -0.014103,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0086555,
+          0.0106971,
+          0.0115638,
+          0.0162517
+        ]
+      },
+      {
+        "label": "\u03c4 = +3",
+        "coefficients": [
+          {
+            "value": 0.0082639,
+            "stars": ""
+          },
+          {
+            "value": -0.0395593,
+            "stars": "***"
+          },
+          {
+            "value": -0.0242854,
+            "stars": "*"
+          },
+          {
+            "value": -0.0210857,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0106517,
+          0.0147496,
+          0.0130588,
+          0.022812
+        ]
+      },
+      {
+        "label": "\u03c4 = +4",
+        "coefficients": [
+          {
+            "value": -0.0081674,
+            "stars": ""
+          },
+          {
+            "value": -0.0479319,
+            "stars": "**"
+          },
+          {
+            "value": -0.0315389,
+            "stars": ""
+          },
+          {
+            "value": -0.0574376,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0113357,
+          0.0185973,
+          0.0191485,
+          0.0471565
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "label": "Observations",
+        "values": [
+          "228,002"
+        ]
+      },
+      {
+        "label": "Within R\u00b2",
+        "values": [
+          "0.0039"
+        ]
+      }
+    ]
+  },
+  "republican": {
+    "title": "ln(Real ZHVI) on Policy Intensity \u00d7 Political Lean",
+    "notes": [
+      "Zip and county\u00d7year FE. SE clustered at county level.",
+      "Intensity = pre-LOMR NFIP policies / population.",
+      "Rep = 1 if county above-median Republican two-party vote share (2020)."
+    ],
+    "columns": [
+      "Intensity \u00d7 Republican Interaction"
+    ],
+    "variables": [
+      {
+        "label": "\u03c4 = -4 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -3.080451,
+            "stars": "*"
+          }
+        ],
+        "standard_errors": [
+          1.759923
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": 1.885033,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          0.44714
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": 0.8770924,
+            "stars": "**"
+          }
+        ],
+        "standard_errors": [
+          0.3677967
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -0.9790446,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          0.2396037
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -2.937022,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          0.6866175
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -5.639862,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          1.681167
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -7.04586,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          1.862251
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -12.71565,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          1.152003
+        ]
+      },
+      {
+        "label": "\u03c4 = -4 \u00d7 intensity \u00d7 Republican",
+        "coefficients": [
+          {
+            "value": 3.941517,
+            "stars": "**"
+          }
+        ],
+        "standard_errors": [
+          1.826246
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 \u00d7 intensity \u00d7 Republican",
+        "coefficients": [
+          {
+            "value": -2.180577,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          0.5305605
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 \u00d7 intensity \u00d7 Republican",
+        "coefficients": [
+          {
+            "value": -1.308467,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          0.4032521
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 \u00d7 intensity \u00d7 Republican",
+        "coefficients": [
+          {
+            "value": 1.092457,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          0.388822
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 \u00d7 intensity \u00d7 Republican",
+        "coefficients": [
+          {
+            "value": 2.671594,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          0.8106356
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 \u00d7 intensity \u00d7 Republican",
+        "coefficients": [
+          {
+            "value": 5.980523,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          1.788586
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 \u00d7 intensity \u00d7 Republican",
+        "coefficients": [
+          {
+            "value": 6.610256,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          2.201434
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 \u00d7 intensity \u00d7 Republican",
+        "coefficients": [
+          {
+            "value": 11.32786,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          1.996926
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "label": "Observations",
+        "values": [
+          "222,843"
+        ]
+      },
+      {
+        "label": "Within R\u00b2",
+        "values": [
+          "0.0058"
+        ]
+      }
+    ]
+  },
+  "updown_intensity": {
+    "title": "ln(Real ZHVI) on Signed LOMR \u00d7 Policy Intensity",
+    "notes": [
+      "Zip and county\u00d7year FE. SE clustered at county level.",
+      "Signed intensity separates upzoned (risk \u2191) and downzoned (risk \u2193) LOMRs."
+    ],
+    "columns": [
+      "Pooled Intensity",
+      "Signed Intensity",
+      "Up + Down"
+    ],
+    "variables": [
+      {
+        "label": "\u03c4 = -4 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": 0.4106624,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.5744749,
+          null,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -0.1304339,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.2792796,
+          null,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -0.3017209,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.1938418,
+          null,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -0.0091879,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.2866075,
+          null,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -0.8105185,
+            "stars": "**"
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.3977378,
+          null,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -1.651486,
+            "stars": "*"
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.8810417,
+          null,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -3.287864,
+            "stars": "***"
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          1.029648,
+          null,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 \u00d7 intensity",
+        "coefficients": [
+          {
+            "value": -7.151533,
+            "stars": "***"
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          2.541291,
+          null,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -4 \u00d7 signed intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.9548916,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.6415278,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 \u00d7 signed intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.6221859,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.5865826,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 \u00d7 signed intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.1279547,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.3474119,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 \u00d7 signed intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.2028239,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          0.2975066,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 \u00d7 signed intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -2.282153,
+            "stars": "*"
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          1.337554,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 \u00d7 signed intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -2.437894,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          1.845109,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 \u00d7 signed intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -1.855091,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          1.784588,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 \u00d7 signed intensity",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.1527603,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          2.214525,
+          null
+        ]
+      },
+      {
+        "label": "iup_m4",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 1.247343,
+            "stars": "*"
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.6483663
+        ]
+      },
+      {
+        "label": "iup_m3",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.517497,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.785816
+        ]
+      },
+      {
+        "label": "iup_m2",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.3582825,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.4169223
+        ]
+      },
+      {
+        "label": "iup_p0",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.1292507,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.4699147
+        ]
+      },
+      {
+        "label": "iup_p1",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -1.591574,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          1.187794
+        ]
+      },
+      {
+        "label": "iup_p2",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -2.103042,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          1.543465
+        ]
+      },
+      {
+        "label": "iup_p3",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -2.229998,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          1.465325
+        ]
+      },
+      {
+        "label": "iup_p4",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -1.302789,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          2.326019
+        ]
+      },
+      {
+        "label": "idown_m4",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.6352417,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.826752
+        ]
+      },
+      {
+        "label": "idown_m3",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.9570374,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.5973089
+        ]
+      },
+      {
+        "label": "idown_m2",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.8427639,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.2945506
+        ]
+      },
+      {
+        "label": "idown_p0",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.4847798,
+            "stars": "*"
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.2865861
+        ]
+      },
+      {
+        "label": "idown_p1",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 3.218305,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          2.233466
+        ]
+      },
+      {
+        "label": "idown_p2",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 2.845882,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          3.40606
+        ]
+      },
+      {
+        "label": "idown_p3",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.865109,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          3.771452
+        ]
+      },
+      {
+        "label": "idown_p4",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -3.681646,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          5.410095
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "label": "Observations",
+        "values": [
+          "228,002",
+          "228,002",
+          "228,002"
+        ]
+      },
+      {
+        "label": "Within R\u00b2",
+        "values": [
+          "0.0039",
+          "0.0017",
+          "0.0018"
+        ]
+      }
+    ]
+  },
+  "robustness": {
+    "title": "ln(Real ZHVI) on LOMR (Robustness)",
+    "notes": [
+      "Zip and county\u00d7year FE. SE clustered at county level.",
+      "(1) Main (weighted): baseline specification with population weights.",
+      "(2) Unweighted: no population weights.",
+      "(3) Geographic intensity: LOMR area / ZCTA area ratio."
+    ],
+    "columns": [
+      "(1)",
+      "(2)",
+      "(3)"
+    ],
+    "variables": [
+      {
+        "label": "\u03c4 = -4 (3+ yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.00839,
+            "stars": ""
+          },
+          {
+            "value": -0.00513,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.00765,
+          0.00583,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -3 (2-3 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.000353,
+            "stars": ""
+          },
+          {
+            "value": -0.00113,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0047,
+          0.00358,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = -2 (1-2 yrs pre)",
+        "coefficients": [
+          {
+            "value": -0.00138,
+            "stars": ""
+          },
+          {
+            "value": -0.00165,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.00303,
+          0.00231,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = 0 (0-1 yr post)",
+        "coefficients": [
+          {
+            "value": -4.85e-05,
+            "stars": ""
+          },
+          {
+            "value": 0.000768,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.00231,
+          0.00204,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +1 (1-2 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.00454,
+            "stars": ""
+          },
+          {
+            "value": -0.000575,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.004,
+          0.00357,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +2 (2-3 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.00926,
+            "stars": ""
+          },
+          {
+            "value": -0.00257,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.00599,
+          0.00515,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +3 (3-4 yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0139,
+            "stars": "*"
+          },
+          {
+            "value": -0.00386,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.00714,
+          0.00639,
+          null
+        ]
+      },
+      {
+        "label": "\u03c4 = +4 (4+ yrs post)",
+        "coefficients": [
+          {
+            "value": -0.0287,
+            "stars": "**"
+          },
+          {
+            "value": -0.00785,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.0113,
+          0.012,
+          null
+        ]
+      },
+      {
+        "label": "geo_m4",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0751,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0461
+        ]
+      },
+      {
+        "label": "geo_m3",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0201,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0341
+        ]
+      },
+      {
+        "label": "geo_m2",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.0329,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0256
+        ]
+      },
+      {
+        "label": "geo_p0",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0144,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0209
+        ]
+      },
+      {
+        "label": "geo_p1",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": -0.000154,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0318
+        ]
+      },
+      {
+        "label": "geo_p2",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0135,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0395
+        ]
+      },
+      {
+        "label": "geo_p3",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0267,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.052
+        ]
+      },
+      {
+        "label": "geo_p4",
+        "coefficients": [
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": null,
+            "stars": ""
+          },
+          {
+            "value": 0.0536,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          null,
+          null,
+          0.0654
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "label": "Observations",
+        "values": [
+          "228,002",
+          "228,002",
+          "228,002"
+        ]
+      },
+      {
+        "label": "Within R\u00b2",
+        "values": [
+          "0.0029",
+          "0.0014",
+          "0.0017"
+        ]
+      }
+    ]
+  },
+  "twfe": {
+    "title": "ln(Real ZHVI) on LOMR (TWFE DiD)",
+    "notes": [
+      "Zip and county\u00d7year FE. SE clustered at county level."
+    ],
+    "columns": [
+      "TWFE DiD"
+    ],
+    "variables": [
+      {
+        "label": "Post-LOMR",
+        "coefficients": [
+          {
+            "value": -0.00699,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          0.00805
+        ]
+      },
+      {
+        "label": "County Unemp. Rate (\\%)",
+        "coefficients": [
+          {
+            "value": -0.00216,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          0.000346
+        ]
+      },
+      {
+        "label": "NFIP Policies (qtr avg)",
+        "coefficients": [
+          {
+            "value": 9.41e-07,
+            "stars": ""
+          }
+        ],
+        "standard_errors": [
+          1.01e-05
+        ]
+      },
+      {
+        "label": "Constant",
+        "coefficients": [
+          {
+            "value": 12.91,
+            "stars": "***"
+          }
+        ],
+        "standard_errors": [
+          0.00219
+        ]
+      }
+    ],
+    "stats": [
+      {
+        "label": "Observations",
+        "values": [
+          "228002"
+        ]
+      },
+      {
+        "label": "Within R\u00b2",
+        "values": [
+          "0.0016"
+        ]
+      }
+    ]
+  }
+}

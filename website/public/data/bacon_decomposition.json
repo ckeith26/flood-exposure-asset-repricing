@@ -1,0 +1,27 @@
+{
+  "title": "Goodman-Bacon Decomposition",
+  "overall_dd": 0.01847377,
+  "components": [
+    {
+      "type": "Within (timing groups)",
+      "estimate": 0.0430603,
+      "weight": 0.03952625
+    },
+    {
+      "type": "Timing groups",
+      "estimate": null,
+      "weight": null
+    },
+    {
+      "type": "Always treated vs timing",
+      "estimate": null,
+      "weight": null
+    },
+    {
+      "type": "Never treated vs timing",
+      "estimate": null,
+      "weight": null
+    }
+  ],
+  "note": "Scatter data requires re-running Stata with CSV export. Run: make estimate"
+}

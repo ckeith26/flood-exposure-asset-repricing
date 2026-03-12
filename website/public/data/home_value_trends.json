@@ -1,0 +1,129 @@
+{
+  "title": "Home Value Trends: Treated vs Control",
+  "y_label": "Mean Real ZHVI ($1,000s, Dec 2022)",
+  "x_label": "Year",
+  "series": [
+    {
+      "label": "Treated (LOMR in window)",
+      "points": [
+        {
+          "year": 2009,
+          "value": 456.4
+        },
+        {
+          "year": 2010,
+          "value": 440.5
+        },
+        {
+          "year": 2011,
+          "value": 404.7
+        },
+        {
+          "year": 2012,
+          "value": 398.8
+        },
+        {
+          "year": 2013,
+          "value": 441.8
+        },
+        {
+          "year": 2014,
+          "value": 483.2
+        },
+        {
+          "year": 2015,
+          "value": 519.7
+        },
+        {
+          "year": 2016,
+          "value": 543.9
+        },
+        {
+          "year": 2017,
+          "value": 561.7
+        },
+        {
+          "year": 2018,
+          "value": 596.8
+        },
+        {
+          "year": 2019,
+          "value": 598.3
+        },
+        {
+          "year": 2020,
+          "value": 613.5
+        },
+        {
+          "year": 2021,
+          "value": 670.1
+        },
+        {
+          "year": 2022,
+          "value": 714.2
+        }
+      ]
+    },
+    {
+      "label": "Control (no LOMR)",
+      "points": [
+        {
+          "year": 2009,
+          "value": 456.4
+        },
+        {
+          "year": 2010,
+          "value": 432.1
+        },
+        {
+          "year": 2011,
+          "value": 400.3
+        },
+        {
+          "year": 2012,
+          "value": 387.6
+        },
+        {
+          "year": 2013,
+          "value": 418.7
+        },
+        {
+          "year": 2014,
+          "value": 455.8
+        },
+        {
+          "year": 2015,
+          "value": 488.6
+        },
+        {
+          "year": 2016,
+          "value": 513.0
+        },
+        {
+          "year": 2017,
+          "value": 535.8
+        },
+        {
+          "year": 2018,
+          "value": 564.4
+        },
+        {
+          "year": 2019,
+          "value": 570.2
+        },
+        {
+          "year": 2020,
+          "value": 584.2
+        },
+        {
+          "year": 2021,
+          "value": 620.4
+        },
+        {
+          "year": 2022,
+          "value": 640.8
+        }
+      ]
+    }
+  ]
+}

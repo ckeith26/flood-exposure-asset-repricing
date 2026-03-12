@@ -1,0 +1,63 @@
+{
+  "title": "Treatment Timing Distribution",
+  "y_label": "Number of Zip Codes",
+  "x_label": "Year of First LOMR",
+  "bars": [
+    {
+      "year": 2009,
+      "count": 36
+    },
+    {
+      "year": 2010,
+      "count": 71
+    },
+    {
+      "year": 2011,
+      "count": 37
+    },
+    {
+      "year": 2012,
+      "count": 31
+    },
+    {
+      "year": 2013,
+      "count": 47
+    },
+    {
+      "year": 2014,
+      "count": 36
+    },
+    {
+      "year": 2015,
+      "count": 47
+    },
+    {
+      "year": 2016,
+      "count": 62
+    },
+    {
+      "year": 2017,
+      "count": 87
+    },
+    {
+      "year": 2018,
+      "count": 74
+    },
+    {
+      "year": 2019,
+      "count": 95
+    },
+    {
+      "year": 2020,
+      "count": 70
+    },
+    {
+      "year": 2021,
+      "count": 73
+    },
+    {
+      "year": 2022,
+      "count": 68
+    }
+  ]
+}
