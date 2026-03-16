@@ -66,7 +66,7 @@
 
 \title{Flood Exposure and Asset Repricing: Evidence from FEMA LOMRs and ZIP-Code Home Values}
 \subtitle{Dartmouth College\\Topics in Money and Finance}
-\author{Cameron Keith\thanks{I thank Professor Apoorv Gupta, Professor of Economics at Dartmouth College, for his guidance and helpful comments on this project. Claude Opus 4.6 was used to assist with code development as well as grammar and spelling checks. All analysis, interpretation, and errors are my own. \newline Email: \href{mailto:cameron.s.keith.26@dartmouth.edu}{cameron.s.keith.26@dartmouth.edu}.}}
+\author{Cameron Keith\thanks{I thank Professor Apoorv Gupta, Professor of Economics at Dartmouth College, for his guidance and helpful comments on this project. I used Claude Opus 4.6 to assist with code development as well as grammar and spelling checks. All analysis, interpretation, and errors are my own. \newline Email: \href{mailto:cameron.s.keith.26@dartmouth.edu}{cameron.s.keith.26@dartmouth.edu}.}}
 \date{\today}
 
 \begin{document}
@@ -74,7 +74,7 @@
 \maketitle
 
 \begin{abstract}
-Do coastal housing markets reprice properties when official flood-map designations change? I study this question using FEMA Letters of Map Revision (LOMRs), localized revisions to National Flood Insurance Program (NFIP) flood maps. In a quarterly ZIP-level event study across U.S. coastal counties from 2009 to 2022, with ZIP and county-by-year fixed effects, I find that home values show near-zero response at impact but decline by about 2.8 percent four or more years after a LOMR. The decline is larger in an interaction specification with pre-treatment flood-insurance penetration. An exploratory political interaction suggests weaker repricing in Republican-leaning counties, although this comparison does not pass the pre-trend test. These findings are consistent with slow, uneven capitalization of regulatory flood-risk information rather than immediate repricing.
+Do coastal housing markets reprice properties when official flood-map designations change? I study this question using FEMA Letters of Map Revision (LOMRs), which are localized revisions to National Flood Insurance Program (NFIP) flood maps. In a quarterly ZIP-level event study across U.S. coastal counties from 2009 to 2022, with ZIP and county-by-year fixed effects, I find that home values show near-zero response at impact but decline by about 2.8 percent four or more years after a LOMR. The decline is larger in an interaction specification with pre-treatment flood-insurance penetration. An exploratory political interaction suggests weaker repricing in Republican-leaning counties, although this comparison does not pass the pre-trend test. These findings are consistent with slow, uneven capitalization of regulatory flood-risk information rather than immediate repricing.
 \end{abstract}
 
 \doublespacing
@@ -92,15 +92,15 @@ JEL Codes: R31; Q54; G22; H84
 
 Flood risk affects housing markets through official designations and realized disasters. Federal Emergency Management Agency (FEMA) flood maps assign properties to regulatory flood-risk zones, which can affect insurance requirements, disclosure, underwriting, and buyer beliefs. The most economically salient threshold is often the Special Flood Hazard Area (SFHA), but Letters of Map Revision (LOMRs) can also matter more broadly because they update the official map that private actors use in transactions. I study whether housing markets reprice when those official designations change through FEMA LOMRs.
 
-These stakes are large because the NFIP is both economically important and fiscally strained. As of 2025, the program covers more than 4.7 million policies with roughly \$1.3 trillion in insured value, yet it still carries \$22.5 billion in debt to the U.S. Treasury after Congress cancelled \$16 billion of NFIP debt in 2017 \citep{CRS2025_NFIPIntro,CRS2025_NFIPBorrowing}. Prior work also suggests that flood risk is not fully incorporated into housing prices: \citet{HinoBurke2021} estimate that floodplain properties are collectively overvalued by about \$44 billion and that rezoning into the floodplain is associated with roughly a 2 percent price discount.
+These stakes are large because the NFIP is both economically important and fiscally strained. As of 2025, the program covers more than 4.7 million policies with roughly \$1.3 trillion in insured value, yet it still carries \$22.5 billion in debt to the U.S. Treasury after Congress canceled \$16 billion of NFIP debt in 2017 \citep{CRS2025_NFIPIntro,CRS2025_NFIPBorrowing}. Prior work also suggests that flood risk is not fully incorporated into housing prices: \citet{HinoBurke2021} estimate that floodplain properties are collectively overvalued by about \$44 billion and that rezoning into the floodplain is associated with roughly a 2 percent price discount.
 
 These stakes make it economically important to understand how housing markets respond when FEMA revises the official map itself. To study that question, I construct a quarterly ZIP-level panel for coastal U.S. counties from 2009 to 2022 that combines Zillow home values with FEMA LOMRs, National Flood Insurance Program (NFIP) data, and county controls \citep{Zillow_ZHVI,FEMA_LOMR,FEMA_NFIP}. A further contribution is the construction of a linked panel that brings together home values, official flood-map revisions, insurance exposure, and local controls in one ZIP-quarter dataset. I run a staggered event study with ZIP and county-by-year fixed effects on first in-window LOMRs. I then interact treatment with pre-treatment NFIP policy penetration to analyze whether repricing is larger where mapped flood risk is already economically relevant.
 
-Home values do not fall sharply after a LOMR. In the baseline specification, the estimated effect is close to zero at treatment and is consistent with a decline of about 2.8 percent four or more years later. The response is stronger in the continuous insurance-intensity specification, although the quartile pattern is non-monotonic. An exploratory political split also suggests weaker repricing in ZIP codes located in more Republican-leaning counties, which is suggestive of heterogeneity in attention to official flood-risk information. However, the political interaction fails the pre-trend test, so I treat that comparison as descriptive.
+Home values do not fall sharply after a LOMR. In the baseline specification, the estimated effect is close to zero at treatment and is consistent with a decline of about 2.8 percent four or more years later. The response is stronger in the continuous insurance-intensity specification. An exploratory political split also suggests weaker repricing in ZIP codes located in more Republican-leaning counties, consistent with heterogeneity in attention to official flood-risk information.
 
 I study four related hypotheses. First, LOMRs are associated with lower home values. Second, if housing markets adjust with frictions, that response should emerge gradually after treatment rather than on impact. Third, if flood insurance mainly shields owners from repricing, higher pre-treatment NFIP exposure should weaken the response, while if salience dominates it should strengthen it. Fourth, if political beliefs shape attention to official flood-risk information, repricing should be weaker in more Republican counties. I test the first two with the baseline event study, the third with the intensity and insurance-outcome specifications, and the fourth with a political interaction that I treat as exploratory because its pre-trends are weaker.
 
-The paper contributes to the flood-risk literature in three ways. First, it studies localized official map revisions rather than realized flood events, broad climate-risk disclosures, or static cross-sectional floodplain comparisons. Among prior work, \citet{ShrZipp2019} is closest in studying flood-zone remapping, while \citet{Weill2023} studies FEMA map updates as information shocks in the insurance market. Second, the staggered ZIP-level panel allows me to study the timing of capitalization after a revision becomes effective, which helps distinguish gradual repricing from an immediate market-wide reset. Third, by interacting treatment with pre-treatment NFIP penetration, I test whether the same map change carries more pricing content where flood insurance was already more financially material.
+The paper contributes to the flood-risk literature in three ways. First, it studies localized official map revisions instead of realized flood events, broad climate-risk disclosures, or static cross-sectional floodplain comparisons. Among prior work, \citet{ShrZipp2019} is closest in studying flood-zone remapping, while \citet{Weill2023} studies FEMA map updates as information shocks in the insurance market. Second, the staggered ZIP-level panel allows me to study the timing of capitalization after a revision becomes effective, which helps distinguish gradual repricing from an immediate market-wide reset. Third, by interacting treatment with pre-treatment NFIP penetration, I test whether the same map change carries more pricing content where flood insurance was already more financially material.
 
 \autoref{sec:background} describes the institutional setting, \autoref{sec:literature} reviews the related literature, and \autoref{sec:data} and \autoref{sec:strategy} present the data and design. \autoref{sec:results} reports the main results, \autoref{sec:robustness} presents exploratory heterogeneity and robustness checks, \autoref{sec:discussion} discusses interpretation and limitations, and \autoref{sec:conclusion} provides areas for future research. Supporting insurance-market and subsample analyses appear in Appendix~\ref{app:tables}.
 
@@ -112,7 +112,7 @@ The paper contributes to the flood-risk literature in three ways. First, it stud
 
 \subsection{FEMA Flood Maps and LOMRs}\label{sec:bg_maps}
 
-FEMA's Flood Insurance Rate Maps (FIRMs) assign properties to regulatory flood-risk zones and provide related hazard information for lenders, insurers, local governments, and buyers. Letters of Map Revision (LOMRs) update those classifications after new topographic, hydrologic, engineering, or physical information. A LOMR can move land into or out of the Special Flood Hazard Area (SFHA), revise the location of the mapped floodplain boundary, or change other map-based flood hazard information that matters for underwriting, disclosure, and insurance. The SFHA remains the most consequential threshold because federally backed mortgages in participating NFIP communities generally require flood insurance for improved structures inside that zone. However, the broader point for this paper is that LOMRs change the official map that market participants use in transactions, even when the revision does not map cleanly into a simple up-or-down SFHA crossing or follow a recent flood that has already drawn attention to the area.
+FEMA's Flood Insurance Rate Maps (FIRMs) assign properties to regulatory flood-risk zones and provide related hazard information for lenders, insurers, local governments, and buyers. Letters of Map Revision (LOMRs) update those classifications after new topographic, hydrologic, engineering, or physical information. A LOMR can move land into or out of the Special Flood Hazard Area (SFHA), revise the location of the mapped floodplain boundary, or change other map-based flood hazard information that matters for underwriting, disclosure, and insurance. The SFHA remains the most consequential threshold because federally backed mortgages in participating NFIP communities generally require flood insurance for improved structures inside that zone. However, the broader point for this paper is that LOMRs change the regulatory baseline that lenders, insurers, and buyers rely on, even when the revision does not map cleanly into a simple up-or-down SFHA crossing or follow a recent flood that has already drawn attention to the area.
 
 \autoref{fig:lomr_example} shows a LOMR in Miami. The example makes the treatment structure concrete: the LOMR polygon overlaps two ZIP codes.
 
@@ -128,9 +128,9 @@ FEMA's Flood Insurance Rate Maps (FIRMs) assign properties to regulatory flood-r
 
 \subsection{Why LOMRs Should Affect Housing Markets}\label{sec:bg_channels}
 
-I expect LOMRs to affect housing prices because they update the official map that market participants use to evaluate expected ownership costs. The most salient case is a revision that changes whether a property is treated as inside the SFHA, but even a boundary revision or other change in mapped flood hazard information can matter if it changes how lenders, insurers, appraisers, or buyers interpret the property. Because those actors use the official map in transactions, a LOMR can have pricing content even when no flood occurs nearby.
+I expect LOMRs to affect housing prices because they revise the regulatory designation that shapes expected ownership costs. Lenders, insurers, appraisers, and buyers all rely on the official map in transactions, so a revision can have pricing content even when no flood occurs nearby.
 
-A lender's flood determination during underwriting may reflect the updated map, which can change insurance requirements, documentation, or the buyer's perception of risk before closing. Prices may then adjust gradually as the new information diffuses through transactions, listings, appraisals, and comparable sales rather than through an immediate market-wide reset.
+A lender's flood determination during underwriting may reflect the updated map, which can change insurance requirements, documentation, or the buyer's perception of risk before closing. Prices may then adjust as the new information diffuses through transactions, listings, appraisals, and comparable sales.
 
 % =============================================================================
 % SECTION 3: RELATED LITERATURE
@@ -139,7 +139,7 @@ A lender's flood determination during underwriting may reflect the updated map, 
 
 \subsection{Flood Risk, Beliefs, and Housing Markets}\label{sec:lit_hazard}
 
-A large literature documents that flood risk is capitalized into property values, especially after salient events. Floodplain discounts appear after hurricanes \citep{BinPolasky2004}, near-miss events \citep{HallstromSmith2005}, and severe flood experience \citep{Kousky2010}, and a meta-analysis estimates an average floodplain discount of about 4.6 percent \citep{BeltranMaddisonElliott2018}. More recent work extends those findings to broader climate-risk signals: \citet{HinoBurke2021} show that regulatory flood-risk information can affect property values even without contemporaneous damage, and \citet{BernsteinGustafsonLewis2019} document discounts for sea-level-rise exposure, although \citet{MurfinSpiegel2020} provide more skeptical evidence.
+A large literature documents that flood risk is capitalized into property values, especially after salient events. Floodplain discounts appear after hurricanes \citep{BinPolasky2004}, near-miss events \citep{HallstromSmith2005}, and severe flood experience \citep{Kousky2010}, and a meta-analysis estimates an average inland floodplain discount of about 4.6 percent, though the same study finds that coastal floodplain properties can command a premium when amenities correlate with flood exposure \citep{BeltranMaddisonElliott2018}. More recent work extends those findings to broader climate-risk signals: \citet{HinoBurke2021} show that regulatory flood-risk information can affect property values even without contemporaneous damage, and \citet{BernsteinGustafsonLewis2019} document discounts for sea-level-rise exposure, although \citet{MurfinSpiegel2020} provide more skeptical evidence.
 
 Whether risk is fully capitalized depends in part on beliefs and attention. \citet{BakkensenBarrage2022}, \citet{GibsonMullinsHill2020}, and \citet{BaldaufGarlappiYannelis2020} emphasize that capitalization varies with local climate beliefs rather than with physical exposure alone. On the disclosure side, \citet{TroyRomm2004} and \citet{Pope2008} find larger floodplain discounts under stronger disclosure rules. \citet{Weill2023} is especially close in spirit because it studies the effects of official FEMA map updates on flood-insurance take-up. I complement that literature by asking whether localized official map revisions are also capitalized into housing values.
 
@@ -154,12 +154,12 @@ Methodologically, \citet{GoodmanBacon2021}, \citet{SunAbraham2021}, and \citet{C
 
 \subsection{Core Panel Structure}\label{sec:data_panel}
 
-My main estimation sample is a ZIP-by-quarter panel for U.S.\ coastal ZIP codes from 2009 to 2022. I begin with a monthly panel, because Zillow home values, NFIP insurance records, and several controls are observed at that frequency. Then, I collapse the data to quarters by averaging the monthly log values within each quarter, because the Zillow Home Value Index (ZHVI) is a three-month smoothed series and monthly observations inherit substantial serial correlation from that construction. After the sample restrictions described below, the quarterly panel contains 4,272 ZIP codes and 228,005 ZIP-quarter observations.
+My main estimation sample is a ZIP-by-quarter panel for U.S.\ coastal ZIP codes from 2009 to 2022. I begin with a monthly panel, because I observe Zillow home values, NFIP insurance records, and several controls at that frequency. Then, I collapse the data to quarters by averaging the monthly log values within each quarter, because the Zillow Home Value Index (ZHVI) is a three-month smoothed series and monthly observations inherit substantial serial correlation from that construction. After the sample restrictions described below, the quarterly panel contains 4,272 ZIP codes and 228,005 ZIP-quarter observations (228,002 in regressions after the fixed-effects estimator drops three singleton groups).
 
 Those 4,272 ZIP codes include 398 single-LOMR treated ZIP codes within the estimation window, 3,711 never-treated ZIP codes, and 163 not-yet-treated ZIP codes whose first LOMR occurs after the sample window and that contribute control observations during the sample period.
 
 \subsection{Data Sources}\label{sec:data_sources}
-The primary outcome is Zillow's ZIP-level Home Value Index (ZHVI), using the all-homes (single-family residences plus condo/co-op), middle-tier, smoothed, seasonally adjusted series, which I deflate to December 2022 dollars using the Consumer Price Index for All Urban Consumers (CPI-U) \citep{FRED_CPI} and transform into $\ln(\text{real ZHVI})$ for the main specifications. Zillow's coverage determines the first major sample screen because a nontrivial share of coastal ZIP codes do not have usable home-value data over the full period.
+The primary outcome is Zillow's ZIP-level Home Value Index (ZHVI), using the all-homes (single-family residences plus condo/co-op), middle-tier, smoothed, seasonally adjusted series, which I deflate to December 2022 dollars using the Consumer Price Index for All Urban Consumers (CPI-U) \citep{FRED_CPI} and transform into $\ln(\text{real ZHVI})$ for the main specifications. Zillow's coverage determines the first major sample screen because a nontrivial share of coastal ZIP codes does not have usable home-value data over the full period.
 
 Treatment comes from FEMA's S\_LOMR polygon layer in the National Flood Hazard Layer \citep{FEMA_LOMR}. I spatially overlay those polygons onto Census ZCTA boundaries \citep{Census_ZCTA} to identify whether a ZIP code is ever exposed to a LOMR and whether the first effective LOMR falls inside the 2009--2022 analysis window. The overlay supports the geographic-intensity extension directly. For the zoning-direction analysis, I use post-LOMR changes in SFHA share, defined as the fraction of a ZIP code's NFIP policies whose rated flood zone falls in the SFHA (A or V zones) in a given month, as a proxy for whether local flood exposure shifts upward or downward.
 
@@ -171,7 +171,7 @@ I add county-level unemployment rates from BLS Local Area Unemployment Statistic
 
 \autoref{tab:sample_construction} summarizes the sample construction. I start from 33,782 U.S.\ ZIP codes, restrict to 5,450 ZIP codes in NOAA coastal counties, and then merge Zillow coverage, which leaves 4,836 coastal ZIP codes with usable home-value data. The LOMR--ZCTA overlay identifies 1,125 ever-treated ZIP codes in that sample, including 855 whose first observed LOMR falls inside the 2009--2022 window.
 
-Then, I impose the event-study restrictions. First, I drop ZIP codes that were already treated before 2009 because they do not have a clean pre-period. Second, I drop ZIP codes with multiple LOMRs because overlapping revisions make event time difficult to interpret. I also winsorize $\ln(\text{real ZHVI})$ at the 1st and 99th percentiles to limit the influence of extreme observations. After these restrictions, the final regression panel contains 4,272 ZIP codes. I impose these restrictions because clean treatment timing has more value here than the additional observations they would preserve.
+Then, I impose the event-study restrictions. First, I drop ZIP codes that were already treated before 2009 because they do not have a clean pre-period. Second, I drop ZIP codes with multiple LOMRs because overlapping revisions make event time difficult to interpret. I also winsorize $\ln(\text{real ZHVI})$ at the 1st and 99th percentiles to limit the influence of extreme observations. After these restrictions, the final regression panel contains 4,272 ZIP codes. I impose these restrictions because clean treatment timing is worth more than the additional observations those ZIP codes would contribute.
 
 % --- Table 1: Sample Construction ---
 \input{tables/s01_sample_construction}
@@ -186,7 +186,7 @@ Then, I impose the event-study restrictions. First, I drop ZIP codes that were a
 
 \subsection{Balance Table}\label{sec:data_balance}
 
-\autoref{tab:balance} compares pre-treatment means across treated and never-treated ZIP codes. Pre-treatment home values are similar, while treated ZIP codes show higher NFIP exposure (\autoref{tab:balance}), reinforcing the case for within-ZIP identification.
+\autoref{tab:balance} compares pre-treatment means across treated and control (never-treated and not-yet-treated) ZIP codes. Pre-treatment home values are similar, while treated ZIP codes show higher NFIP exposure, reinforcing the case for within-ZIP identification.
 
 % --- Table 3: Balance Table ---
 \input{tables/s03_balance_table}
@@ -198,7 +198,7 @@ Then, I impose the event-study restrictions. First, I drop ZIP codes that were a
 
 \subsection{Baseline Event-Study Specification}\label{sec:strategy_baseline}
 
-I estimate dynamic effects with a staggered event-study difference-in-differences design because the institutional argument in Section~\ref{sec:bg_channels} suggests gradual capitalization after a LOMR rather than an immediate one-quarter jump. The unit of observation is the ZIP-quarter. I assign treatment timing with the first effective LOMR in the 2009--2022 window, and I exclude ZIP codes with earlier treatment or multiple LOMRs because event time is otherwise difficult to interpret.
+I estimate dynamic effects with a staggered event-study difference-in-differences design because the institutional argument in Section~\ref{sec:bg_channels} motivates a dynamic specification that can trace the adjustment path after a LOMR. The unit of observation is the ZIP-quarter. I assign treatment timing with the first effective LOMR in the 2009--2022 window, and I exclude ZIP codes with earlier treatment or multiple LOMRs (as described in \autoref{sec:data_sample}).
 
 % Main estimating equation
 \begin{equation}\label{eq:event_study}
@@ -236,7 +236,7 @@ However, I treat that result as necessary evidence, not a guarantee. The test ha
     \centering
     \caption{Parallel Trends: Pre-Treatment Event-Time Coefficients}
     \label{fig:parallel_trends}
-    \includegraphics[width=0.75\textwidth]{figures/s10_parallel_trends.png}
+    \includegraphics[width=0.75\textwidth]{figures/s10_parallel_trends_web.png}
     \caption*{\footnotesize \textit{Note: Event-time coefficients from the main specification (\autoref{eq:event_study}) with 95\% confidence intervals. Reference period: $\tau = -1$ (12--0 months before LOMR). ZIP and county-by-year fixed effects. Standard errors clustered at county level (339 clusters).}}
 \end{figure}
 \FloatBarrier
@@ -251,7 +251,7 @@ However, I treat that result as necessary evidence, not a guarantee. The test ha
 
 \autoref{tab:main_regression} reports the main test of H1 and H2 through baseline event-study regressions for $\ln(\text{real ZHVI})$. The dependent variable is log real ZIP-level home value, and the key regressors are event-time indicators for years relative to the first in-window LOMR. Column 1 is the total-effect specification with no controls beyond fixed effects, which avoids conditioning on NFIP policy counts that may themselves respond to treatment. Column 2 adds county unemployment and NFIP policy controls, and Column 3 adds premiums and claims. I present all three to show whether the treatment path is sensitive to those additions. \autoref{fig:event_study_main} plots the same coefficients as a dynamic path. The three lead coefficients are small, and the joint pre-trend test from \autoref{sec:strategy_pretrends} does not reject. The first two post-treatment bins are also close to zero and statistically imprecise. However, the path becomes more negative over time. In the main specification, the coefficient at three to four years after treatment is $-0.0139$ with a standard error of $0.0071$ and is marginal at the 10 percent level. The coefficient at four or more years after treatment is $-0.0287$ with a standard error of $0.0113$, a 95 percent confidence interval of $[-0.0508, -0.0066]$, and a $p$-value of $0.011$.
 
-Economically, the late-post-treatment estimate is associated with about a 2.8 percent decline in real home values relative to the year before treatment. At the sample mean real home value in the estimation sample, that magnitude corresponds to roughly \$14,000. That magnitude is more consistent with gradual repricing that accumulates as the map revision enters transactions, underwriting, and buyer expectations than with a large immediate shock.
+Economically, the late-post-treatment estimate is associated with about a 2.8 percent decline in real home values relative to the year before treatment. At the sample mean real home value in the estimation sample, that magnitude corresponds to roughly \$13,800. That magnitude is more consistent with gradual repricing that accumulates as the map revision enters transactions, underwriting, and buyer expectations than with a large immediate shock.
 
 The estimates also move very little across columns. The $\tau{+}4$ coefficient ranges from $-0.0285$ without controls to $-0.0287$ with the main controls and $-0.0287$ again with the fuller insurance-control set. That stability matters because it suggests the late negative effect is not especially sensitive to whether I control only for unemployment and NFIP policies or also add premiums and claims.
 
@@ -263,11 +263,11 @@ The estimates also move very little across columns. The $\tau{+}4$ coefficient r
     \centering
     \caption{Event Study: LOMR Effect on Home Values}
     \label{fig:event_study_main}
-    \includegraphics[width=0.85\textwidth]{figures/s05_event_study_main.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/s05_event_study_main_web.png}
     \caption*{\footnotesize \textit{Note: Coefficient estimates from the main specification (\autoref{eq:event_study}) with 95\% confidence intervals. Reference period: $\tau = -1$. Controls: county unemployment, NFIP policies. ZIP and county-by-year fixed effects. Standard errors clustered at county level. Population-weighted.}}
 \end{figure}
 
-I interpret this pattern as gradual capitalization rather than sharp repricing. ZIP-level home values reflect a sequence of transactions, so the adjustment path should be slower than a single market-clearing price would suggest. I cannot rule out coincident local changes tied to development or engineering review, but the absence of differential pre-treatment decline and the later arrival of negative effects are consistent with capitalization of the map revision.
+ZIP-level home values reflect a sequence of transactions, so the adjustment path should be slower than a single market-clearing price would suggest. I cannot rule out coincident local changes tied to development or engineering review, but the absence of differential pre-treatment decline and the later arrival of negative effects support capitalization of the map revision.
 \FloatBarrier
 
 
@@ -276,7 +276,7 @@ I interpret this pattern as gradual capitalization rather than sharp repricing. 
 % =============================================================================
 \subsection{Heterogeneity by Pre-Treatment Insurance Exposure}\label{sec:intensity}
 
-\autoref{tab:intensity} provides the primary test of H3 and keeps $\ln(\text{real ZHVI})$ as the dependent variable while comparing two sets of regressors. Column 1 repeats the binary event-time indicators from the baseline design, and Column 2 replaces them with event-time indicators interacted with pre-treatment NFIP policy intensity. \autoref{fig:event_study_intensity} plots the interaction coefficients as a dynamic path. The comparison tests whether the average treatment effect masks larger declines in places where flood insurance was already more prominent before treatment. In the continuous interaction specification, the later post-treatment coefficients are more negative than in the baseline binary model. The estimate at four or more years after treatment is $\hat{\beta}_{\tau+4} = -7.15^{***}$ with a standard error of 2.54. The coefficient is large in absolute value because intensity is measured as policies per resident (mean $= 0.0059$, or equivalently 5.93 per 1,000 residents as reported in \autoref{tab:summary_stats}). Evaluated at the sample mean, that coefficient implies about a 4.2 percent decline in real home values, roughly 1.5 times the baseline binary estimate. The joint pre-trend test yields $F(3,338) = 1.47$ with $p = 0.223$, which is broadly supportive, although I treat the interaction magnitudes with more caution than the baseline event study because the heterogeneous-effects design is less stable overall.
+\autoref{tab:intensity} provides the primary test of H3 and keeps $\ln(\text{real ZHVI})$ as the dependent variable while comparing two sets of regressors. Column 1 repeats the binary event-time indicators from the baseline design, and Column 2 replaces them with event-time indicators interacted with pre-treatment NFIP policy intensity. \autoref{fig:event_study_intensity} plots the interaction coefficients as a dynamic path. The comparison tests whether the average treatment effect masks larger declines in places where flood insurance was already more prominent before treatment. In the continuous interaction specification, the later post-treatment coefficients are more negative than in the baseline binary model. The estimate at four or more years after treatment is $\hat{\beta}_{\tau+4} = -7.15^{***}$ with a standard error of 2.54. The coefficient is large in absolute value because I measure intensity as policies per resident (mean $= 0.0059$, or equivalently 5.93 per 1,000 residents as reported in \autoref{tab:summary_stats}). Evaluated at the sample mean, that coefficient implies about a 4.2 percent decline in real home values, roughly 1.5 times the baseline binary estimate. The joint pre-trend test yields $F(3,338) = 1.47$ with $p = 0.223$, which is broadly supportive, although the interaction magnitudes deserve more caution than the baseline event study because the heterogeneous-effects design is less stable overall.
 
 % --- Table 5: Binary vs. Intensity ---
 \input{tables/s06_regression_intensity}
@@ -286,13 +286,13 @@ I interpret this pattern as gradual capitalization rather than sharp repricing. 
     \centering
     \caption{Intensity-Weighted Event Study}
     \label{fig:event_study_intensity}
-    \includegraphics[width=0.85\textwidth]{figures/s06_event_study_intensity.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/s06_event_study_intensity_web.png}
     \caption*{\footnotesize \textit{Note: Coefficient estimates from the intensity specification (\autoref{eq:intensity}) with 95\% confidence intervals. Treatment intensity = pre-LOMR NFIP policies per capita.}}
 \end{figure}
 
-I interpret the intensity results as evidence that pre-treatment insurance penetration amplifies the price effect of a LOMR because it proxies for flood-risk salience rather than protection from repricing. If flood insurance mainly insulated owners from revised risk, higher NFIP penetration should weaken the housing-price response. I find the opposite pattern, consistent with \citet{Wagner2022}, who shows that flood-insurance participation reflects pre-existing observable differences related to flood-risk exposure rather than simply muting price responses. The data favor the salience interpretation over a moral-hazard or already-informed alternative, although I cannot rule out either.
+I interpret the intensity results as evidence that pre-treatment insurance penetration amplifies the price effect of a LOMR because it proxies for flood-risk salience, not protection from repricing. If flood insurance mainly insulates owners from revised risk, higher NFIP penetration should weaken the housing-price response. I find the opposite pattern, consistent with \citet{Wagner2022}, who shows that flood-insurance participation reflects pre-existing observable differences related to flood-risk exposure rather than simply muting price responses. The data favor the salience interpretation over a moral-hazard or already-informed alternative, though the design does not cleanly distinguish between them.
 
-A quartile decomposition of the same interaction shows that repricing becomes detectable once a ZIP reaches moderate insurance exposure (Q2), although the gradient across upper quartiles is non-monotonic and imprecise (\autoref{tab:intensity_quartiles}, \autoref{fig:event_study_quartiles}). Therefore, I treat the continuous intensity specification as the main evidence and the quartile design as a descriptive check.
+A quartile decomposition of the same interaction shows that repricing becomes detectable once a ZIP reaches moderate insurance exposure (Q2), although the gradient across upper quartiles is non-monotonic and imprecise (\autoref{tab:intensity_quartiles}, \autoref{fig:event_study_quartiles}). The continuous intensity specification therefore serves as the main evidence, and the quartile design as a descriptive check.
 \FloatBarrier
 
 
@@ -304,7 +304,7 @@ A quartile decomposition of the same interaction shows that repricing becomes de
 
 \subsection{Exploratory Heterogeneity}\label{sec:heterogeneity}
 
-This section turns to H4 and to supporting heterogeneity checks that I treat as exploratory. The overall panel remains large, but several splits leave only about 100 to 225 treated ZIP codes, which reduces precision, and some diagnostics weaken. Splitting by proxy SFHA-share direction and by state disclosure regime does not produce individually precise estimates, and neither set of interaction terms is statistically distinguishable from zero (\autoref{tab:updown}, \autoref{fig:event_study_updown}, \autoref{tab:disclosure}, \autoref{fig:event_study_disclosure}). The null on disclosure is consistent with the LOMR itself serving as the relevant information event, although low power in the strict-disclosure subsample limits that interpretation.
+This section turns to H4 and supporting heterogeneity checks that I treat as exploratory. The overall panel remains large, but several splits leave only about 100 to 225 treated ZIP codes, which reduces precision, and some diagnostics weaken. Splitting by proxy SFHA-share direction and by state disclosure regime does not produce individually precise estimates, and neither set of interaction terms is statistically distinguishable from zero (\autoref{tab:updown}, \autoref{fig:event_study_updown}, \autoref{tab:disclosure}, \autoref{fig:event_study_disclosure}). The null on disclosure is compatible with the LOMR itself serving as the relevant information event, although low power in the strict-disclosure subsample limits that interpretation.
 
 \autoref{tab:republican} returns to $\ln(\text{real ZHVI})$ as the dependent variable, but the key regressors now split the intensity-weighted event-study coefficients into a baseline path for Democratic-leaning counties and a differential interaction for Republican-leaning counties. \autoref{fig:event_study_republican} plots the implied event-study paths.
 
@@ -316,11 +316,11 @@ This section turns to H4 and to supporting heterogeneity checks that I treat as 
     \centering
     \caption{Event Study by Political Lean}
     \label{fig:event_study_republican}
-    \includegraphics[width=0.78\textwidth]{figures/s09c_event_study_republican.pdf}
+    \includegraphics[width=0.78\textwidth]{figures/s09c_event_study_republican_web.png}
     \caption*{\footnotesize \textit{Note: Intensity-weighted event-study coefficients split by county-level Republican vote share (above/below median). Democratic-leaning baseline (solid) and Republican implied effect (dashed). Pre-treatment interaction F-test rejects parallel trends ($p < 0.001$); interpret as descriptive.}}
 \end{figure}
 
-These results present a sharper initial contrast on political heterogeneity. Democratic-leaning counties show a large negative baseline intensity effect, while the Republican interaction term is positive and similar in magnitude, which implies a near-zero net effect in more Republican counties. That pattern is consistent with belief heterogeneity dampening the capitalization of official flood-risk information. However, the pre-treatment interaction test rejects parallel trends, with $F(3,331) = 12.05$ and $p < 0.001$, so I cannot rule out that the partisan gap reflects pre-existing differential trends rather than a differential response to the LOMR itself. Therefore, I present the partisan split as descriptive evidence that motivates further investigation rather than as a causal claim.
+These results present a sharper initial contrast on political heterogeneity. Democratic-leaning counties show a large negative baseline intensity effect, while the Republican interaction term is positive and similar in magnitude, which implies a near-zero net effect in more Republican counties. That pattern is in line with belief heterogeneity dampening the capitalization of official flood-risk information. However, the pre-treatment interaction test rejects parallel trends, with $F(3,331) = 12.05$ and $p < 0.001$, so the partisan gap may reflect pre-existing differential trends rather than a differential response to the LOMR itself. Therefore, I present the partisan split as descriptive evidence that motivates further investigation rather than as a causal claim.
 
 
 % =============================================================================
@@ -328,14 +328,14 @@ These results present a sharper initial contrast on political heterogeneity. Dem
 % =============================================================================
 \subsection{Robustness Checks}\label{sec:robustness_checks}
 
-The Goodman-Bacon decomposition (\autoref{fig:bacon}) is reassuring: 95.4 percent of the identifying weight comes from never-treated versus treated comparisons. The Callaway and Sant'Anna check (\autoref{fig:cs}) shows a positive pre-treatment average ($\text{Pre}_{avg} = 0.0059$, $p = 0.002$) and an imprecise post-treatment average ($\text{Post}_{avg} = 0.0073$, $p = 0.299$), in tension with the baseline; I note that this estimator uses annual data, a balanced panel, no controls, and no weights, features that align with the attenuated unweighted column in \autoref{tab:robustness}. The unemployment placebo (\autoref{fig:placebo}) fails the pre-trend test ($F(3,338) = 7.22$, $p = 0.0001$), which implies that LOMR-generating processes may correlate with local economic changes not fully absorbed by a linear unemployment control. Those checks suggest the baseline result depends in part on population weighting and may reflect some correlation between LOMR timing and local economic dynamics.
+The Goodman-Bacon decomposition (\autoref{fig:bacon}) is reassuring on one dimension: 95.4 percent of the identifying weight comes from never-treated versus treated comparisons. However, the simple annual TWFE overall DD estimate underlying that decomposition is positive ($+0.020$), consistent with the positive sign in the unweighted and C\&S specifications and opposite to the main event-study result. The Callaway and Sant'Anna check (\autoref{fig:cs}) shows a positive pre-treatment average ($\text{Pre}_{avg} = 0.0059$, $p = 0.002$) and an imprecise post-treatment average ($\text{Post}_{avg} = 0.0073$, $p = 0.299$), in tension with the baseline; I note that this estimator uses annual data, a balanced panel, no controls, and no weights, features that align with the attenuated unweighted column in \autoref{tab:robustness}. The unemployment placebo (\autoref{fig:placebo}) fails the pre-trend test ($F(3,338) = 7.22$, $p = 0.0001$), which implies that LOMR-generating processes may correlate with local economic changes not fully absorbed by a linear unemployment control. Those checks suggest the baseline result depends in part on population weighting and may reflect some correlation between LOMR timing and local economic dynamics.
 
 \autoref{tab:robustness} keeps $\ln(\text{real ZHVI})$ as the dependent variable and changes the treatment specification across columns. Column 1 reproduces the weighted baseline event study, Column 2 removes the population weights, and Column 3 replaces the insurance-intensity interaction with a geographic-intensity interaction based on LOMR overlap area. I use the table to show which parts of the baseline result survive those alternative choices.
 
 % --- Table 9: Robustness ---
 \input{tables/s095_robustness_table}
 
-Excluding Florida reduces the $\tau{+}4$ estimate from $-0.029$ to $-0.017$ and removes significance; state-level clustering preserves it, with a 95 percent confidence interval of $[-0.0545, -0.0029]$ (Appendix~\ref{app:figures}). In \autoref{tab:robustness}, unweighted estimates are close to zero, and the geographic-intensity interaction is null, even though the policy-intensity interaction in \autoref{sec:intensity} is negative and significant. That contrast points toward salience rather than a simple area-overlap gradient.\footnote{The population-threshold subsample ($\geq$1,000 residents) leaves the baseline essentially unchanged ($\tau{+}4 = -0.025$, SE $= 0.012$). The SFHA-crossing subsample (\autoref{tab:sfha_crossing}) remains negative but insignificant ($\tau{+}4 = -0.019$, SE $= 0.012$).} Overall, the baseline pattern is present but not universal across every alternative specification.
+Excluding Florida reduces the $\tau{+}4$ estimate from $-0.029$ to $-0.017$ and removes significance, while state-level clustering preserves the baseline result, with a 95 percent confidence interval of $[-0.0545, -0.0029]$ (Appendix~\ref{app:figures}). In \autoref{tab:robustness}, unweighted estimates are close to zero, and the geographic-intensity interaction is null, even though the policy-intensity interaction in \autoref{sec:intensity} is negative and significant. That contrast points toward salience rather than a simple area-overlap gradient.\footnote{The population-threshold subsample ($\geq$1,000 residents) leaves the baseline essentially unchanged ($\tau{+}4 = -0.025$, SE $= 0.0115$). The SFHA-crossing subsample (\autoref{tab:sfha_crossing}) remains negative but insignificant ($\tau{+}4 = -0.019$, SE $= 0.012$).} Overall, the baseline pattern is present but not universal across every alternative specification.
 
 
 % =============================================================================
@@ -345,13 +345,13 @@ Excluding Florida reduces the $\tau{+}4$ estimate from $-0.029$ to $-0.017$ and 
 
 \subsection{Interpretation}
 
-Taken together, the results suggest that LOMRs matter less as immediate damage shocks and more as slow-moving regulatory information shocks. The baseline event study shows little movement on impact and a more negative price response several years later. The continuous intensity specification points to larger declines where pre-treatment NFIP penetration is higher, although the quartile pattern is non-monotonic. These themes converge in one interpretation. A map revision has more pricing content where more households, lenders, and insurers already sit near the margin where flood designation affects expected costs.
+Taken together, the results suggest that LOMRs operate as slow-moving regulatory information shocks. The continuous intensity specification points to larger declines where pre-treatment NFIP penetration is higher, consistent with the idea that a map revision has more pricing content where more households, lenders, and insurers already sit near the margin where flood designation affects expected costs.
 
-The weaker results narrow the interpretation. Insurance take-up shows limited movement around the LOMR, and claims are unaffected, consistent with an informational shock rather than a realized disaster (\autoref{tab:insurance}). The policy-intensity interaction is significant but the geographic-overlap measure is null, pointing toward economic salience rather than simple area overlap. Disclosure-law interactions are weak (\autoref{tab:disclosure}), the up/down price splits are imprecise (\autoref{tab:updown}), and the political split fails the pre-trend standard (\autoref{tab:republican}). Therefore, I read the core result as gradual capitalization of revised official risk information, with supporting evidence on salience but only mixed evidence on the exact transaction channel.
+The weaker results limit how far that interpretation extends. Insurance take-up shows limited movement around the LOMR, and claims are largely unaffected, pointing to an informational shock rather than a realized disaster (\autoref{tab:insurance}). The policy-intensity interaction is significant but the geographic-overlap measure is null, which favors economic salience over simple area overlap. Disclosure-law interactions are weak (\autoref{tab:disclosure}), the up/down price splits are imprecise (\autoref{tab:updown}), and the political split fails the pre-trend standard (\autoref{tab:republican}). Therefore, I read the core result as capitalization of revised official risk information, with supporting evidence on salience but only mixed evidence on the exact transaction channel.
 
 \subsection{Limitations}
 
-Several limitations remain. The analysis uses ZIP-level panels rather than parcel-level or transaction-level data, so I cannot observe which homes actually cross the SFHA boundary or how quickly lenders and buyers respond inside each ZIP. The baseline specification also pools revisions that may raise or lower mapped exposure because my ZIP-level treatment construction does not directly identify direction from the LOMR overlay alone. I proxy for directional heterogeneity with changes in NFIP SFHA share around the LOMR, but that measure is an exposure proxy rather than a direct parcel-level map transition. Therefore, the heterogeneity exercises should be read as suggestive rather than definitive. The robustness checks in \autoref{sec:robustness_checks} also narrow the causal claim, particularly the sensitivity to population weighting and to Florida.
+Several limitations remain. The analysis uses ZIP-level panels rather than parcel-level or transaction-level data, so I cannot observe which homes actually cross the SFHA boundary or how quickly lenders and buyers respond inside each ZIP. The baseline specification also pools revisions that may raise or lower mapped exposure because my ZIP-level treatment construction does not directly identify direction from the LOMR overlay alone. I proxy for directional heterogeneity with changes in NFIP SFHA share around the LOMR, but that measure is an exposure proxy, not a direct parcel-level map transition. The heterogeneity exercises therefore remain suggestive. The robustness checks in \autoref{sec:robustness_checks} also narrow the causal claim, particularly the sensitivity to population weighting and to Florida.
 
 
 % =============================================================================
@@ -397,12 +397,12 @@ This appendix collects supplementary estimates that I discuss more briefly in th
 
 \subsection*{Insurance Market Responses}\label{app:insurance}
 
-\autoref{tab:insurance} shifts the dependent variable away from home values and onto insurance outcomes. Column 1 uses $\ln(\text{NFIP policies} + 1)$, Column 2 uses $\ln(\text{NFIP claims} + 1)$, and the key regressors remain the event-time indicators for years relative to the first LOMR. \autoref{fig:event_study_policies} plots the policy coefficients. Policy counts serve as mechanism evidence: if LOMRs reduce housing values through immediate insurance adjustment, NFIP policy counts should move around the revision itself. In the aggregate policy event study, I see limited movement in $\ln(\text{NFIP policies} + 1)$, with at most a brief decline in the early post-treatment window. Claims serve a different, placebo-like role. A LOMR does not generate flooding on its own, and I find no significant post-treatment effects on $\ln(\text{NFIP claims} + 1)$. That null is consistent with an informational or regulatory shock rather than a realized disaster shock.
+\autoref{tab:insurance} shifts the dependent variable away from home values and onto insurance outcomes. Column 1 uses $\ln(\text{NFIP policies} + 1)$, Column 2 uses $\ln(\text{NFIP claims} + 1)$, and the key regressors remain the event-time indicators for years relative to the first LOMR. \autoref{fig:event_study_policies} plots the policy coefficients. Policy counts serve as mechanism evidence: if LOMRs reduce housing values through immediate insurance adjustment, NFIP policy counts should move around the revision itself. In the aggregate policy event study, I see limited movement in $\ln(\text{NFIP policies} + 1)$, with at most a brief decline in the early post-treatment window. Claims serve a different, placebo-like role. A LOMR does not generate flooding on its own, and I find no post-treatment effects on $\ln(\text{NFIP claims} + 1)$ that are significant at the 5 percent level, although the $\tau{+}2$ coefficient is marginally significant at 10 percent. That pattern is consistent with an informational or regulatory shock rather than a realized disaster shock.
 
 % --- Table: Insurance Regressions ---
 \input{tables/s08_regression_insurance}
 
-\autoref{tab:updown} keeps $\ln(\text{real ZHVI})$ as the dependent variable and splits the event-study coefficients into ZIP codes with proxy SFHA-share increases and decreases around the LOMR. The key regressors are therefore the same event-time indicators as in the baseline specification, estimated separately for the two proxy zoning directions. Neither path is individually precise. At $\tau{+}4$, the upzoned estimate is $-0.0142$ with a standard error of $0.0170$, while the downzoned estimate is $-0.0237$ with a standard error of $0.0186$. Those estimates remain statistically indistinguishable from zero, so I treat the sign pattern as descriptive rather than probative.
+\autoref{tab:updown} keeps $\ln(\text{real ZHVI})$ as the dependent variable and splits the event-study coefficients into ZIP codes with proxy SFHA-share increases and decreases around the LOMR. The key regressors are therefore the same event-time indicators as in the baseline specification, estimated separately for the two proxy zoning directions. Neither path is individually precise. At $\tau{+}4$, the upzoned estimate is $-0.0142$ with a standard error of $0.0170$, while the downzoned estimate is $-0.0237$ with a standard error of $0.0186$. Those estimates remain statistically indistinguishable from zero, so the sign pattern remains descriptive rather than probative.
 
 \input{tables/s09_regression_updown}
 
@@ -432,7 +432,7 @@ The appendix begins with the treatment-timing histogram, then presents the inten
     \centering
     \caption{Distribution of First LOMR Year}
     \label{fig:treatment_timing}
-    \includegraphics[width=0.75\textwidth]{figures/s10_treatment_timing_hist.png}
+    \includegraphics[width=0.75\textwidth]{figures/s10_treatment_timing_hist_web.png}
     \caption*{\footnotesize \textit{Note: Distribution of the first effective LOMR year across treated ZIP codes in the estimation sample (2009--2022).}}
 \end{figure}
 
@@ -441,7 +441,7 @@ The appendix begins with the treatment-timing histogram, then presents the inten
     \centering
     \caption{Event Study by Insurance Penetration Quartile}
     \label{fig:event_study_quartiles}
-    \includegraphics[width=0.85\textwidth]{figures/s06b_event_study_intensity_quartiles.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/s06b_event_study_intensity_quartiles_web.png}
     \caption*{\footnotesize \textit{Note: Separate event-study coefficients by pre-LOMR policy intensity quartile. Q1 = lowest penetration, Q4 = highest. 95\% confidence intervals shown.}}
 \end{figure}
 
@@ -450,7 +450,7 @@ The appendix begins with the treatment-timing histogram, then presents the inten
     \centering
     \caption{Insurance Policies Event Study}
     \label{fig:event_study_policies}
-    \includegraphics[width=0.85\textwidth]{figures/s08_event_study_policies.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/s08_event_study_policies_web.png}
     \caption*{\footnotesize \textit{Note: Event-study coefficients for ln(NFIP policies + 1) as the dependent variable. Same specification as \autoref{eq:event_study}.}}
 \end{figure}
 
@@ -459,7 +459,7 @@ The appendix begins with the treatment-timing histogram, then presents the inten
     \centering
     \caption{Event Study: SFHA-Share Increase vs.\ Decrease Proxy}
     \label{fig:event_study_updown}
-    \includegraphics[width=0.85\textwidth]{figures/s09_event_study_updown.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/s09_event_study_updown_web.png}
     \caption*{\footnotesize \textit{Note: Separate event-study coefficients for treated ZIP codes classified using increases or decreases in NFIP SFHA share around the LOMR.}}
 \end{figure}
 
@@ -468,7 +468,7 @@ The appendix begins with the treatment-timing histogram, then presents the inten
     \centering
     \caption{Disclosure Law Heterogeneity Event Study}
     \label{fig:event_study_disclosure}
-    \includegraphics[width=0.85\textwidth]{figures/s09b_event_study_disclosure.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/s09b_event_study_disclosure_web.png}
     \caption*{\footnotesize \textit{Note: Event-study coefficients interacted with state mandatory flood disclosure indicator (9 strict states).}}
 \end{figure}
 
@@ -477,7 +477,7 @@ The appendix begins with the treatment-timing histogram, then presents the inten
     \centering
     \caption{Insurance Policies Event Study by SFHA-Share-Change Proxy}
     \label{fig:event_study_insurance_updown}
-    \includegraphics[width=0.85\textwidth]{figures/s08b_event_study_policies_updown.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/s08b_event_study_policies_updown_web.png}
     \caption*{\footnotesize \textit{Note: Event-study coefficients for ln(NFIP policies + 1) estimated separately for treated ZIP codes classified by changes in NFIP SFHA share around the LOMR.}}
 \end{figure}
 
@@ -486,11 +486,11 @@ The appendix begins with the treatment-timing histogram, then presents the inten
     \centering
     \caption{SFHA-Share-Change Proxy Subsample Event Study}
     \label{fig:event_study_sfha}
-    \includegraphics[width=0.85\textwidth]{figures/s09d_event_study_sfha_crossing.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/s09d_event_study_sfha_crossing_web.png}
     \caption*{\footnotesize \textit{Note: Event-study coefficients restricted to LOMRs with non-stable NFIP SFHA-share changes around the LOMR. Same specification as \autoref{eq:event_study}.}}
 \end{figure}
 
-\autoref{fig:bacon} reports the Goodman-Bacon decomposition for the simple TWFE design. The key detail is that 95.4 percent of the identifying weight comes from never-treated versus treated timing comparisons, while only 0.3 percent comes from already-treated comparisons. Therefore, the main concern in this decomposition is not extreme negative weighting from already-treated units. The larger issue is still that a single post indicator compresses the dynamic pattern.
+\autoref{fig:bacon} reports the Goodman-Bacon decomposition for the simple TWFE design. The key detail is that 95.4 percent of the identifying weight comes from never-treated versus treated timing comparisons, while only 0.3 percent comes from already-treated comparisons. Therefore, the main concern in this decomposition is not extreme negative weighting from already-treated units. The overall DD estimate from this annual, unweighted, no-controls TWFE is positive ($+0.020$), which is consistent with the attenuated or reversed sign seen in the unweighted and C\&S specifications. The larger issue is still that a single post indicator compresses the dynamic pattern.
 
 % --- Figure A5: Bacon Decomposition ---
 \begin{figure}[!htbp]
@@ -508,18 +508,18 @@ The appendix begins with the treatment-timing histogram, then presents the inten
     \centering
     \caption{Callaway \& Sant'Anna Event Study}
     \label{fig:cs}
-    \includegraphics[width=0.85\textwidth]{figures/s13_event_study_cs.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/s13_event_study_cs_web.png}
     \caption*{\footnotesize \textit{Note: Callaway and Sant'Anna DiD estimator following \citet{CallawaySantAnna2021}. Annual frequency, balanced panel, not-yet-treated and never-treated as controls. Cohorts restricted to 2009--2022.}}
 \end{figure}
 
-\autoref{fig:placebo} reports the unemployment placebo. The pre-trend test fails, with $F(3,338) = 7.22$ and $p = 0.0001$, so this figure should be read as a warning sign rather than supportive evidence. I keep it in the appendix because it is informative about the possibility of residual local dynamics around treatment timing.
+\autoref{fig:placebo} reports the unemployment placebo. The pre-trend test fails, with $F(3,338) = 7.22$ and $p = 0.0001$, so this figure should be read as a warning sign, not as supportive evidence. I keep it in the appendix because it is informative about the possibility of residual local dynamics around treatment timing.
 
 % --- Figure A7: Placebo Event Study ---
 \begin{figure}[!htbp]
     \centering
     \caption{Placebo Event Study: County Unemployment Rate}
     \label{fig:placebo}
-    \includegraphics[width=0.85\textwidth]{figures/s14_event_study_placebo.pdf}
+    \includegraphics[width=0.85\textwidth]{figures/s14_event_study_placebo_web.png}
     \caption*{\footnotesize \textit{Note: Event-study coefficients with county unemployment rate as the dependent variable. Pre-trend F-test: $F(3, 338) = 7.22$, $p = 0.0001$.}}
 \end{figure}
 \FloatBarrier
@@ -531,9 +531,9 @@ Two additional diagnostics are not plotted here but still matter for interpretat
 
 I begin the geographic construction with 33,782 ZIP codes from the SimpleMaps ZIP database and restrict the sample to 5,450 ZIP codes located in NOAA coastal counties. Then, I overlay FEMA's effective S\_LOMR polygons onto Census ZCTA boundaries to identify exposure to official map revisions. At the ZIP level, this procedure records the number of matched LOMRs, the first and last effective dates, and a geographic treatment-intensity measure equal to the overlap area between the LOMR polygon and the ZIP proxy geography divided by total ZIP area. In the full 5,450-ZIP coastal universe (before the Zillow coverage screen), the overlay yields 2,936 LOMR--ZIP pairs, 1,162 ever-treated ZIP codes, and 886 ZIP codes whose first observed LOMR falls inside the 2009--2022 window. After restricting to the 4,836 ZIP codes with usable Zillow data, those counts fall to 1,125 ever-treated and 855 first-in-window, as reported in \autoref{tab:sample_construction}.
 
-I merge those treatment measures to monthly Zillow ZIP-level home values, county unemployment rates from BLS LAUS, and OpenFEMA NFIP policies and claims aggregated to the ZIP-month level. The NFIP aggregation yields policy counts, total premiums, average premiums, SFHA zone share, claims counts, and total claims paid. I deflate Zillow values to December 2022 dollars with the Consumer Price Index for All Urban Consumers. The merged monthly panel is then exported for estimation, where it is collapsed to quarters (averaging monthly log values within each quarter) because the ZHVI is already a three-month smoothed index. At the estimation stage, I winsorize the quarterly log home values at the 1st and 99th percentiles and impose the sample restrictions: I drop ZIP codes treated before 2009 and ZIP codes with multiple LOMRs. The resulting quarterly estimation sample contains 4,272 ZIP codes.
+I merge those treatment measures to monthly Zillow ZIP-level home values, county unemployment rates from BLS LAUS, and OpenFEMA NFIP policies and claims aggregated to the ZIP-month level. The NFIP aggregation yields policy counts, total premiums, average premiums, SFHA zone share, claims counts, and total claims paid. I deflate Zillow values to December 2022 dollars with the Consumer Price Index for All Urban Consumers. I then export the merged monthly panel for estimation and collapse it to quarters (averaging monthly log values within each quarter) because the ZHVI is already a three-month smoothed index. At the estimation stage, I winsorize the quarterly log home values at the 1st and 99th percentiles and impose the sample restrictions: I drop ZIP codes treated before 2009 and ZIP codes with multiple LOMRs. The resulting quarterly estimation sample contains 4,272 ZIP codes.
 
-The heterogeneity variables require additional construction choices. I define policy intensity as the ZIP's pre-treatment average NFIP policy count divided by population, and I drop ZIP codes with values above one because those cases imply implausible denominators. I classify proxy upzoning and downzoning by comparing mean NFIP SFHA zone share in the 12 months before and after the LOMR effective date; ZIP codes with a change exceeding $\pm 1$ percentage point are classified as upzoned or downzoned, and the remainder as stable. This measure should be read as an exposure proxy rather than a direct parcel-level map transition. I construct the political heterogeneity measure from county-level mean Republican two-party vote share, split at the sample median, and I construct the disclosure variables from hand-coded state flood-disclosure rules. Those choices still shape the interpretation of the heterogeneity results, because each one trades cleaner coverage for a less direct measure of the underlying institutional channel.
+The heterogeneity variables require additional construction choices. I define policy intensity as the ZIP's pre-treatment average NFIP policy count divided by population, and I drop ZIP codes with values above one because those cases imply implausible denominators. I classify proxy upzoning and downzoning by comparing mean NFIP SFHA zone share in the 12 months before and after the LOMR effective date; I classify ZIP codes with a change exceeding $\pm 1$ percentage point as upzoned or downzoned, and the remainder as stable. This measure should be read as an exposure proxy rather than a direct parcel-level map transition. I construct the political heterogeneity measure from county-level mean Republican two-party vote share, split at the sample median, and I construct the disclosure variables from hand-coded state flood-disclosure rules. Those choices still shape the interpretation of the heterogeneity results, because each one trades cleaner coverage for a less direct measure of the underlying institutional channel.
 
 
 \end{document}
