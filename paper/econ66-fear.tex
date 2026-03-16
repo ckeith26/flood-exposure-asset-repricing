@@ -137,15 +137,10 @@ A lender's flood determination during underwriting may reflect the updated map, 
 % =============================================================================
 \section{Related Literature}\label{sec:literature}
 
-\subsection{Flood Risk, Beliefs, and Housing Markets}\label{sec:lit_hazard}
-
-A large literature documents that flood risk is capitalized into property values, especially after salient events. Floodplain discounts appear after hurricanes \citep{BinPolasky2004}, near-miss events \citep{HallstromSmith2005}, and severe flood experience \citep{Kousky2010}, and a meta-analysis estimates an average inland floodplain discount of about 4.6 percent, though the same study finds that coastal floodplain properties can command a premium when amenities correlate with flood exposure \citep{BeltranMaddisonElliott2018}. More recent work extends those findings to broader climate-risk signals: \citet{HinoBurke2021} show that regulatory flood-risk information can affect property values even without contemporaneous damage, and \citet{BernsteinGustafsonLewis2019} document discounts for sea-level-rise exposure, although \citet{MurfinSpiegel2020} provide more skeptical evidence.
+A large literature documents that flood risk is capitalized into property values, especially after important events. Floodplain discounts appear after hurricanes \citep{BinPolasky2004}, near-miss events \citep{HallstromSmith2005}, and severe flood experience \citep{Kousky2010}, and a meta-analysis estimates an average inland floodplain discount of about 4.6 percent, though the same study finds that coastal floodplain properties can command a premium when amenities correlate with flood exposure \citep{BeltranMaddisonElliott2018}. More recent work extends those findings to broader climate-risk signals: \citet{HinoBurke2021} show that regulatory flood-risk information can affect property values even without contemporaneous damage, and \citet{BernsteinGustafsonLewis2019} document discounts for sea-level-rise exposure, although \citet{MurfinSpiegel2020} provide more skeptical evidence.
 
 Whether risk is fully capitalized depends in part on beliefs and attention. \citet{BakkensenBarrage2022}, \citet{GibsonMullinsHill2020}, and \citet{BaldaufGarlappiYannelis2020} emphasize that capitalization varies with local climate beliefs rather than with physical exposure alone. On the disclosure side, \citet{TroyRomm2004} and \citet{Pope2008} find larger floodplain discounts under stronger disclosure rules. \citet{Weill2023} is especially close in spirit because it studies the effects of official FEMA map updates on flood-insurance take-up. I complement that literature by asking whether localized official map revisions are also capitalized into housing values.
 
-\subsection{Difference-in-Differences with Staggered Treatment}\label{sec:lit_did}
-
-Methodologically, \citet{GoodmanBacon2021}, \citet{SunAbraham2021}, and \citet{CallawaySantAnna2021} show why staggered TWFE event studies can be misleading when treatment timing and effects vary. I address those concerns with dynamic estimates, cautious interpretation of pooled coefficients, and heterogeneity-robust checks in \autoref{sec:robustness_checks}.
 
 % =============================================================================
 % SECTION 4: DATA
@@ -223,7 +218,7 @@ I next ask whether the same map revision has a larger price effect where flood-i
 
 Identification comes from comparing within-ZIP changes in home values around the first LOMR to changes in never-treated and not-yet-treated ZIP codes observed in the same county-year. ZIP fixed effects absorb time-invariant differences across local markets, such as baseline housing quality, persistent amenity value, and long-run flood exposure. County-by-year fixed effects absorb annual shocks that operate at the county level, including broad labor-market conditions and county housing cycles.
 
-The key assumption is that, absent the LOMR, treated ZIP codes would have followed the same trend as comparison ZIP codes within the same county-year cell. I cannot test that assumption directly, and I do not want to state it too strongly. A LOMR can follow local development, drainage work, or engineering review, and those processes may coincide with housing-market changes for reasons other than flood-risk information. That concern does not invalidate the design, but it remains the main threat to identification. I address it with the sample restrictions above, rich fixed effects, and explicit pre-trend tests. I also report a Callaway and Sant'Anna check later because staggered timing can distort TWFE event studies when treatment effects vary across cohorts or over event time.
+The key assumption is that, absent the LOMR, treated ZIP codes would have followed the same trend as comparison ZIP codes within the same county-year cell. I cannot test that assumption directly, and I do not want to state it too strongly. A LOMR can follow local development, drainage work, or engineering review, and those processes may coincide with housing-market changes for reasons other than flood-risk information. That concern does not invalidate the design, but it remains the main threat to identification. I address it with the sample restrictions above, rich fixed effects, and explicit pre-trend tests. Recent work by \citet{GoodmanBacon2021}, \citet{SunAbraham2021}, and \citet{CallawaySantAnna2021} shows that staggered TWFE event studies can be misleading when treatment timing and effects vary across cohorts. I address those concerns with dynamic estimates, cautious interpretation of pooled coefficients, and a Callaway and Sant'Anna heterogeneity-robust check in \autoref{sec:robustness_checks}.
 
 \subsection{Parallel Trends}\label{sec:strategy_pretrends}
 
@@ -237,7 +232,7 @@ However, I treat that result as necessary evidence, not a guarantee. The test ha
     \caption{Parallel Trends: Pre-Treatment Event-Time Coefficients}
     \label{fig:parallel_trends}
     \includegraphics[width=0.75\textwidth]{figures/s10_parallel_trends_web.png}
-    \caption*{\footnotesize \textit{Note: Event-time coefficients from the main specification (\autoref{eq:event_study}) with 95\% confidence intervals. Reference period: $\tau = -1$ (12--0 months before LOMR). ZIP and county-by-year fixed effects. Standard errors clustered at county level (339 clusters).}}
+    \caption*{\footnotesize \textit{Note: Mean real ZHVI (December 2022 dollars) by year for treated ZIP codes (first LOMR in 2009--2022 window) and control ZIP codes (never-treated and not-yet-treated). Unconditional means, population-weighted.}}
 \end{figure}
 \FloatBarrier
 
@@ -249,7 +244,7 @@ However, I treat that result as necessary evidence, not a guarantee. The test ha
 
 \subsection{Baseline Effects of LOMRs}\label{sec:results_baseline}
 
-\autoref{tab:main_regression} reports the main test of H1 and H2 through baseline event-study regressions for $\ln(\text{real ZHVI})$. The dependent variable is log real ZIP-level home value, and the key regressors are event-time indicators for years relative to the first in-window LOMR. Column 1 is the total-effect specification with no controls beyond fixed effects, which avoids conditioning on NFIP policy counts that may themselves respond to treatment. Column 2 adds county unemployment and NFIP policy controls, and Column 3 adds premiums and claims. I present all three to show whether the treatment path is sensitive to those additions. \autoref{fig:event_study_main} plots the same coefficients as a dynamic path. The three lead coefficients are small, and the joint pre-trend test from \autoref{sec:strategy_pretrends} does not reject. The first two post-treatment bins are also close to zero and statistically imprecise. However, the path becomes more negative over time. In the main specification, the coefficient at three to four years after treatment is $-0.0139$ with a standard error of $0.0071$ and is marginal at the 10 percent level. The coefficient at four or more years after treatment is $-0.0287$ with a standard error of $0.0113$, a 95 percent confidence interval of $[-0.0508, -0.0066]$, and a $p$-value of $0.011$.
+\autoref{tab:main_regression} reports the main test of H1 and H2 through baseline event-study regressions for $\ln(\text{real ZHVI})$. The dependent variable is log real ZIP-level home value, and the key regressors are event-time indicators for years relative to the first in-window LOMR. Column 1 is the total-effect specification with no controls beyond fixed effects, which avoids conditioning on NFIP policy counts that may themselves respond to treatment. Column 2 adds county unemployment and NFIP policy controls, and Column 3 adds premiums and claims. I present all three to show whether the treatment path is sensitive to those additions. \autoref{fig:event_study_main} plots the same coefficients as a dynamic path. The three lead coefficients are small, and the joint pre-trend test from \autoref{sec:strategy_pretrends} does not reject. The first two post-treatment bins are also close to zero and statistically imprecise. However, the path becomes more negative over time. In the main specification, the coefficient at three to four years after treatment is $-0.0139$ with a standard error of $0.0071$ and is significant at the 10 percent level. The coefficient at four or more years after treatment is $-0.0287$ with a standard error of $0.0113$, a 95 percent confidence interval of $[-0.0508, -0.0066]$, and a $p$-value of $0.011$.
 
 Economically, the late-post-treatment estimate is associated with about a 2.8 percent decline in real home values relative to the year before treatment. At the sample mean real home value in the estimation sample, that magnitude corresponds to roughly \$13,800. That magnitude is more consistent with gradual repricing that accumulates as the map revision enters transactions, underwriting, and buyer expectations than with a large immediate shock.
 
@@ -287,7 +282,7 @@ ZIP-level home values reflect a sequence of transactions, so the adjustment path
     \caption{Intensity-Weighted Event Study}
     \label{fig:event_study_intensity}
     \includegraphics[width=0.85\textwidth]{figures/s06_event_study_intensity_web.png}
-    \caption*{\footnotesize \textit{Note: Coefficient estimates from the intensity specification (\autoref{eq:intensity}) with 95\% confidence intervals. Treatment intensity = pre-LOMR NFIP policies per capita.}}
+    \caption*{\footnotesize \textit{Note: Coefficient estimates from the intensity specification (\autoref{eq:intensity}) with 95\% confidence intervals. Treatment intensity = pre-LOMR NFIP policies per capita. ZIP and county-by-year fixed effects. Standard errors clustered at county level. Population-weighted.}}
 \end{figure}
 
 I interpret the intensity results as evidence that pre-treatment insurance penetration amplifies the price effect of a LOMR because it proxies for flood-risk salience, not protection from repricing. If flood insurance mainly insulates owners from revised risk, higher NFIP penetration should weaken the housing-price response. I find the opposite pattern, consistent with \citet{Wagner2022}, who shows that flood-insurance participation reflects pre-existing observable differences related to flood-risk exposure rather than simply muting price responses. The data favor the salience interpretation over a moral-hazard or already-informed alternative, though the design does not cleanly distinguish between them.
@@ -317,7 +312,7 @@ This section turns to H4 and supporting heterogeneity checks that I treat as exp
     \caption{Event Study by Political Lean}
     \label{fig:event_study_republican}
     \includegraphics[width=0.78\textwidth]{figures/s09c_event_study_republican_web.png}
-    \caption*{\footnotesize \textit{Note: Intensity-weighted event-study coefficients split by county-level Republican vote share (above/below median). Democratic-leaning baseline (solid) and Republican implied effect (dashed). Pre-treatment interaction F-test rejects parallel trends ($p < 0.001$); interpret as descriptive.}}
+    \caption*{\footnotesize \textit{Note: Intensity-weighted event-study coefficients split by county-level Republican vote share (above/below median). Democratic-leaning counties (blue) and Republican-leaning counties (red). Pre-treatment interaction F-test rejects parallel trends ($p < 0.001$); interpret as descriptive.}}
 \end{figure}
 
 These results present a sharper initial contrast on political heterogeneity. Democratic-leaning counties show a large negative baseline intensity effect, while the Republican interaction term is positive and similar in magnitude, which implies a near-zero net effect in more Republican counties. That pattern is in line with belief heterogeneity dampening the capitalization of official flood-risk information. However, the pre-treatment interaction test rejects parallel trends, with $F(3,331) = 12.05$ and $p < 0.001$, so the partisan gap may reflect pre-existing differential trends rather than a differential response to the LOMR itself. Therefore, I present the partisan split as descriptive evidence that motivates further investigation rather than as a causal claim.
@@ -425,7 +420,7 @@ This appendix collects supplementary estimates that I discuss more briefly in th
 
 \section{Additional Figures}\label{app:figures}
 
-The appendix begins with the treatment-timing histogram, then presents the intensity-quartile and insurance-mechanism figures discussed in Sections~\ref{sec:intensity} and~\ref{sec:discussion}, and finally collects the supplementary heterogeneity and diagnostic figures. The main value of these figures is not to reveal a hidden sharp effect. It is to show either that treatment timing is spread across the sample period or that confidence intervals widen once the treated sample is split into narrower groups.
+This section collects the event-study plots for the subsample and mechanism specifications reported in the tables above, along with the diagnostic figures referenced in Section~\ref{sec:robustness_checks}. The main value of these figures is not to reveal a hidden sharp effect. It is to show either that treatment timing is spread across the sample period or that confidence intervals widen once the treated sample is split into narrower groups.
 
 % --- Appendix Figure: Treatment Timing Histogram ---
 \begin{figure}[!htbp]
@@ -433,7 +428,7 @@ The appendix begins with the treatment-timing histogram, then presents the inten
     \caption{Distribution of First LOMR Year}
     \label{fig:treatment_timing}
     \includegraphics[width=0.75\textwidth]{figures/s10_treatment_timing_hist_web.png}
-    \caption*{\footnotesize \textit{Note: Distribution of the first effective LOMR year across treated ZIP codes in the estimation sample (2009--2022).}}
+    \caption*{\footnotesize \textit{Note: Distribution of the first effective LOMR year across all treated ZIP codes with a first LOMR in the 2009--2022 window, before the multi-LOMR exclusion.}}
 \end{figure}
 
 % --- Appendix Figure: Quartile Event Studies ---
@@ -524,7 +519,17 @@ The appendix begins with the treatment-timing histogram, then presents the inten
 \end{figure}
 \FloatBarrier
 
-Two additional diagnostics are not plotted here but still matter for interpretation. In the leave-one-out exercise, excluding Florida reduces the late-post-treatment estimate from about $-0.029$ to $-0.017$ and makes it statistically insignificant, while exclusions of other states leave the estimate close to the baseline value. Under state-level clustering, the $\tau{+}4$ coefficient remains $-0.0287$, and the standard error rises to $0.0132$, which yields a 95 percent confidence interval of $[-0.0545, -0.0029]$. Those checks do not reverse the sign of the main result, and state-level clustering preserves statistical significance.
+\autoref{fig:leave_one_out} reports the leave-one-out exercise. Excluding Florida reduces the late-post-treatment estimate from about $-0.029$ to $-0.017$ and makes it statistically insignificant, while exclusions of other states leave the estimate close to the baseline value. Under state-level clustering, the $\tau{+}4$ coefficient remains $-0.0287$, and the standard error rises to $0.0132$, which yields a 95 percent confidence interval of $[-0.0545, -0.0029]$. Those checks do not reverse the sign of the main result, and state-level clustering preserves statistical significance.
+
+% --- Figure: Leave-One-Out by State ---
+\begin{figure}[!htbp]
+    \centering
+    \caption{Leave-One-Out by State: $\tau = +4$ Coefficient}
+    \label{fig:leave_one_out}
+    \includegraphics[width=0.85\textwidth]{figures/leave_one_out_state_web.png}
+    \caption*{\footnotesize \textit{Note: Each point shows the $\tau = +4$ coefficient from the main specification (\autoref{eq:event_study}) after dropping the indicated state. Horizontal bars are 95\% confidence intervals. Blue dashed line marks the full-sample estimate. Florida is the only exclusion that materially shifts the estimate.}}
+\end{figure}
+\FloatBarrier
 
 
 \section{Data Construction Details}\label{app:data}
